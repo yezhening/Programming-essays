@@ -1,2 +1,1 @@
-# Programming-essays
-编程随笔
+# 编程随笔（Programming-essays）
