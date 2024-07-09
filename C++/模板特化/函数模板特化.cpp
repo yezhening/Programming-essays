@@ -5,13 +5,13 @@ using namespace std;
 template <typename T>
 void myPrint(T t)
 {
-    cout << t << endl;
+    cout << "泛化 " << t << endl;
 }
 
 template <>
 void myPrint<double>(double t)
 {
-    cout << t <<" double"<< endl;
+    cout << "特化 " << t << endl;
 }
 
 int main()
@@ -24,6 +24,6 @@ int main()
 
 /*
 输出：
-1
-2 double
+泛化 1
+特化 2
 */

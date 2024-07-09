@@ -10,7 +10,7 @@ public:
 
     void myPrint()
     {
-        cout << this->t_ << endl;
+        cout << "泛化 " << this->t_ << endl;
     }
 
 private:
@@ -25,7 +25,7 @@ public:
 
     void myPrint()
     {
-        cout << this->t_ << " double" << endl;
+        cout << "特化 " << this->t_ << endl;
     }
 
 private:
@@ -45,6 +45,6 @@ int main()
 
 /*
 输出：
-1
-2 double
+泛化 1
+特化 2
 */
