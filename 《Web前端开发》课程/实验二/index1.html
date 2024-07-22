@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图书</title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<img id="headerimage" src="images/bookbanner.jpg" alt="">
+		</div>
+		<div id="content">	
+			<div class="sidebar">
+				<ul id="ranking">
+					<h1>图书排行榜</h1>
+					<li><a href="#">三十六计</a></li>
+					<br>
+					<li><a href="#">小学生必背古诗词80首</a></li>
+					<br>
+					<li><a href="#">神笔马良</a></li>
+					<br>
+					<li><a href="#">姜小牙上学记</a></li>
+					<br>
+					<li><a href="#">一起长大的文具</a></li>
+					<br>
+					<li><a href="#">七色花</a></li>
+					<br>
+					<li><a href="#">愿望的实现</a></li>
+				</ul>
+			</div>
+			<div class="main">
+				<img class="left" src="images/book1.jpg" alt="">
+				<p>
+					《三十六计》是中国古代的兵家宝典，主要着眼于战场上应敌的计谋、对策，揭示了如何迅速做出准确判断、采取正确对策以克敌制胜的道理。两千多年来，它不仅被广泛运用于古今中外的各种军事战争中，也常用于政治、经济、外交、情报等方面的斗争或竞争中，许多著名的军事家、政治家、企业家都从《三十六计》的韬略中直接受益，从而获得成功。
+				</p>
+				<div class="hr"></div>
+				<img class="right" src="images/book2.jpg" alt="">
+				<p>
+					根据最新教育部语文新大纲要求，选编古代汉乐府诗、北朝民歌和唐、宋、明、清等各个朝代著名诗人留下的80首经典诗歌，大多数是人们能够熟诵的古诗，而且有一定的教育意义和代表性，所以最适宜小学生自备阅读、熟记背诵。文中每首诗都注重实际应用，均配以优美准确的翻译、重点字词解释以及全面深度的精妙赏析，将带学生走进诗词的美丽花园，领略传统文化的博大精深。
+				</p>
+				<div class="hr"></div>
+				<img class="left" src="images/book3.jpg" alt="">
+				<p>
+					神笔马良是中国童话故事，我国著名儿童文学作家、理论家洪汛涛先生创作于20世纪50年代，表现了封建社会百姓的苦难以及马良的正义和善良。
+					神笔马良的故事从诞生起，经久不衰，家喻户晓，成功的塑造了马良，神仙爷爷，县令，皇帝等人的鲜明的人物形象，浑身充满正能量！
+				</p>
+				<div class="hr"></div>
+				<img class="right" src="images/book4.jpg" alt="">
+				<p>
+					《姜子牙上学记》共分为《好朋友争夺战》、《老师的法宝》、《我的变形记》、《给我一个好朋友》四册。内页穿插漫画，让小读者阅读起来更加生动有趣；以小米圈趣味插画，蜡笔小新画风，更幽默搞笑；每册书的后面都有北猫叔叔自己总结的学习方法呢。
+				</p>
+			</div>
+		</div>
+		<div id="footer">	
+			&copy;Web前端开发过程 版权所有
+		</div>
+	</div>
+	<script>
+    function setSN(e) {
+        var ul = document.getElementById(e);
+        var lis = ul.getElementsByTagName('li');
+        for (var i = 0, l = lis.length; i < l; i++) {
+            var tHTML = lis[i].innerHTML;            
+            lis[i].innerHTML = '<span style="background-color:red;color:white;" class="numbers">&nbsp;' + (i + 1) + '&nbsp;</span>' + tHTML;
+        }
+    }
+    setSN('ranking');
+	</script>
+</body>
+</html>

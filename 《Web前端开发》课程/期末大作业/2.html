@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#code {
+			width: 100px;
+			height: 50px;
+			background-color: lightblue;
+			font-size: 44px;
+			letter-spacing: 5px;
+		}
+	</style>
+	<script>
+		function createRandCode() {
+			var a = ['a', 'b', 'c', '1', '2', '3'];
+			var randcode = "";
+			for (var i = 0; i < 3; i++) { //3位随机码				
+				var randpos = Math.floor(Math.random() * (a.length)); //[0,6)随机整数				
+				randcode += a[randpos];
+			}
+			document.getElementById("code").innerHTML = randcode;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="code"></div>
+	<button onclick="createRandCode()">验证码</button>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		body {
+			padding: 0px;
+			margin: 0px;
+			font-size: 12px;
+		}
+
+
+		#nav {
+			width: 800px;
+			margin: 0 auto;
+			height: 30px;
+			line-height: 30px;
+			list-style: none;
+			background-color: #ccc;
+		}
+
+		#nav li {
+			float: left;
+			width: 100px;
+			text-align: center;
+
+		}
+
+		#nav li a {
+			text-decoration: none;
+			display: block;
+		}
+
+		#nav li a:hover {
+			background-color: #ccc;
+		}
+
+		#nav li div {
+			/*  初始状态隐藏菜单 */
+			display: none;
+			background-color: #ccc;
+			height: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<ul id="nav">
+		<li>
+			<a href="#">一级菜单1</a>
+			<div>
+				<a href="#">二级菜单1</a>
+				<a href="#">二级菜单2</a>
+				<a href="#">二级菜单3</a>
+			</div>
+		</li>
+		<li>
+			<a href="#">一级菜单2</a>
+			<div>
+				<a href="#">二级菜单1</a>
+				<a href="#">二级菜单2</a>
+				<a href="#">二级菜单3</a>
+			</div>
+		</li>
+		<li>
+			<a href="#">一级菜单3</a>
+			<div>
+				<a href="#">二级菜单1</a>
+				<a href="#">二级菜单2</a>
+				<a href="#">二级菜单3</a>
+			</div>
+		</li>
+		<li>
+			<a href="#">一级菜单4</a>
+			<div>
+				<a href="#">二级菜单1</a>
+				<a href="#">二级菜单2</a>
+				<a href="#">二级菜单3</a>
+			</div>
+		</li>
+
+	</ul>
+	<script>
+		var ulnav = document.getElementById("nav");
+		var lis = ulnav.getElementsByTagName("li");
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].onmouseover = function () {
+				this.getElementsByTagName("div")[0].style.display = "block";
+			};
+			lis[i].onmouseout = function () {
+				this.getElementsByTagName("div")[0].style.display = "none";
+			};
+		}
+	</script>
+</body>
+
+</html>

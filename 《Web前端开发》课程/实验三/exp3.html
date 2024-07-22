@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: lightblue;
+            float: left;
+            font-size: 100px;
+        }
+
+        ul,
+        input {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>数组如下</h1>
+    <ul id="array"></ul>
+    <input type="button" value="求和按钮" onclick="result()" />
+    <br>
+    <p id="display"></p>
+
+
+    <script>
+        var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var htmlText = "";
+        var sum = 0;
+
+        for (var i = 0; i < a.length; i++) {
+            htmlText += "<li>" + a[i] + "</li>";
+        }
+        document.getElementById("array").innerHTML = htmlText;
+
+        for (var i = 0; i < a.length; i++) {
+            sum = sum + a[i];
+        }
+
+        function result() {
+            document.getElementById("display").innerHTML = sum;
+        }
+    </script>
+
+</body>
+
+</html>

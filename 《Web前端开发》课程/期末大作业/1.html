@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <title>网页换肤</title>
+       <style type="text/css">
+              #container {
+                     width: 500px;
+                     margin: 0 auto;
+              }
+
+              #bottom {
+                     height: 400px;
+                     border: 1px #666666 solid;       
+              }
+
+              #bottom p {
+                     padding: 20px;
+              }
+
+              h1 {
+                     text-align: center;
+                     text-indent: 0;
+              }
+
+              #btBlack,
+              #btWhite {
+                     width: 30px;
+                     height: 15px;
+                     border: 1px #000 solid;
+              }
+
+              #btBlack {
+                     background-color: #000000;
+              }
+
+              #btWhite {
+                     background-color: #fff;
+              }
+
+              .black {
+                     color: #fff;
+                     background-color: #000;
+              }
+
+              .white {
+                     color: #000;
+                     background-color: #fff;
+              }
+       </style>
+       <script>
+              function changeSkin(cssName) {
+                     document.getElementById("bottom").className = cssName;
+              }
+       </script>
+</head>
+
+<body>
+       <div id="container">
+              <div id="top">
+                     <button id="btWhite" onclick="changeSkin('white')"></button>
+                     <button id="btBlack" onclick="changeSkin('black')"></button>
+              </div>
+              <div id="bottom">
+                     <h1>WEB 前端开发</h1>
+                     <p>
+                            Web前端开发是指通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、
+                            解决方案，来实现互联网产品的用户界面交互。它从网页制作演变而来，
+                            名称上有很明显的时代特征。在互联网的演化进程中，网页制作是Web1.0时代的产物，
+                            早期网站主要内容都是静态，以图片和文字为主，用户使用网站的行为也以浏览为主。
+                            随着互联网技术的发展和HTML5、CSS3的应用，现代网页更加美观，交互效果显著，
+                            功能更加强大。
+                     </p>
+              </div>
+       </div>
+</body>
+
+</html>

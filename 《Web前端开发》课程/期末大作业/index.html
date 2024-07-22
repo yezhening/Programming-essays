@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <style type="text/css">
+        #background {
+            background-image: url(images/背景图.jpg);
+            background-size: 1920px 911px;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+            float: left;
+            /* width: 260px;  */
+            /* height: px; */
+            padding-top: 55px;
+            padding-left: 715px;
+            /* margin-left: -20px; */
+            font-size: 25px;
+        }
+
+        #yemei {
+            /* width: 400px; */
+            /* height: 50px; */
+            float: right;
+            /* margin: 0; */
+            /* padding: 0; */
+            padding-top: 30px;
+            padding-right: 500px;
+        }
+
+        #sousuo {
+            width: 380px;
+            /* height: 40px; */
+            /* font-size: 25px; */
+            /* outline: none; */
+            float: right;
+            opacity: 0.4;
+            padding-top: 25px;
+        }
+
+        #shurukuang {
+            width: 170px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        #sousuokuang {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        #daohanglan {
+            /* height: 500px; */
+            padding-top: 120px;
+        }
+
+        #nav {
+            width: 850px;
+            height: 50px;
+            margin: 0 auto;
+            line-height: 50px;
+            list-style: none;
+            background-color: #184e39;
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        #nav li {
+            float: left;
+            width: 120px;
+            text-align: center;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            display: block;
+            color: gold;
+        }
+
+        #nav li a:hover {
+            background-color: rgb(17, 68, 15);
+            opacity: 1.0;
+        }
+
+        #nav li div {
+            display: none;
+            /* background-color: brown; */
+            /* height: 0; */
+        }
+
+        #content {
+            width: 1200px;
+            height: 740px;
+        }
+
+        #sidebar {
+            width: 380px;
+            float: left;
+            padding-left: 330px;
+        }
+
+        #main {
+            width: 400px;
+            height: 100px;
+            float: right;
+            padding-top: 40px;
+            padding-left: 90px;
+        }
+
+        #ranking {
+            list-style-type: none;
+            padding-top: 50px;
+            padding-left: 250px;
+        }
+
+        #ranking h1 {
+            color: gold
+        }
+
+        #ranking a {
+            color: rgb(101, 101, 243);
+            text-decoration: none;
+        }
+
+        #ranking a:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        #main img {
+            width: 130px;
+            height: 130px;
+        }
+
+        #main p {
+            text-align: justify;
+            font-size: 26px;
+        }
+
+        #main p:first-letter {
+            color: red;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .left {
+            float: left;
+            border-right: 2px solid gold;
+            border-bottom: 2px solid gold;
+        }
+
+        #yejiao {
+            height: 50px;
+            line-height: 50px;
+            ;
+            /* margin-top: 10px; */
+            background-color: #8d9692;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background">
+        <div>
+            <div>
+                <p id="logo">夜悊</p>
+            </div>
+            <div id="yemei">
+                <form action="" id="sousuo">
+                    <input type="text" id="shurukuang" value="输入你想知道的">
+                    <input type="button" id="sousuokuang" value="搜索">
+                </form>
+            </div>
+        </div>
+        <div id="daohanglan">
+            <ul id="nav">
+                <li>
+                    <a href="#">个人爱好</a>
+                    <div>
+                        <a href="#">学习</a>
+                        <a href="#">玩游戏</a>
+                        <a href="#">听音乐</a>
+                        <a href="#">弹吉他</a>
+                        <a href="#">打篮球</a>
+                    </div>
+                <li>
+                    <a href="#">最爱课程</a>
+                    <div>
+                        <a href="#">web前端开发</a>
+                        <a href="#">C语言程序设计</a>
+                        <a href="#">近现代史纲要</a>
+                        <a href="#">体育</a>
+                        <a href="#">数学</a>
+                    </div>
+                <li>
+                    <a href="#">喜欢的音乐</a>
+                    <div>
+                        <a href="#">Mojito</a>
+                        <a href="#">爱，存在</a>
+                        <a href="#">太阳</a>
+                    </div>
+                <li>
+                    <a href="#">喜欢的食物</a>
+                    <div>
+                        <a href="#">海南粉</a>
+                        <a href="#">清炒空心菜</a>
+                    </div>
+                <li>
+                    <a href="#">喜欢的动物</a>
+                    <div>
+                        <a href="#">狗</a>
+                        <a href="#">猫</a>
+                    </div>
+
+                <li>
+                    <a href="#">喜欢的游戏</a>
+                    <div>
+                        <a href="#">英雄联盟</a>
+                    </div>
+
+                <li>
+                    <a href="#">喜欢的人</a>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <ul id="ranking">
+                    <h1>链接</h1>
+                    <br>
+                    <li><a href="#">首页</a></li>
+                    <br>
+                    <li><a href="个人爱好页.html">个人爱好页</a></li>
+                    <br>
+                    <li><a href="最爱课程页.html">最爱课程页</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <img class="left" src="images/mojito.jpg" alt="">
+                <p>
+                    《Mojito》以古巴最著名的鸡尾酒“Mojito”为名，写出在遇见爱情时的浪漫情调。
+                </p>
+                <br>
+                <img class="left" src="images/海南粉.jpg" alt="">
+                <p>
+                    海南粉是海南的特色食物。其特点是料多味浓、细粉鲜嫩爽滑,配汤清、鲜、沁甜。
+                </p>
+                <br>
+
+                <img class="left" src="images/金毛.jpg" alt="">
+                <p>
+                    金毛犬有耐心，表情友善，个性热情、机警、自信而且不怕生，性格讨人喜欢。
+                </p>
+            </div>
+        </div>
+        <div id="yejiao">
+            <h2>
+                制作：夜悊
+            </h2>
+        </div>
+        <script>
+            var ulnav = document.getElementById("nav");
+            var lis = ulnav.getElementsByTagName("li");
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].onmouseover = function () {
+                    this.getElementsByTagName("div")[0].style.display = "block";
+                };
+                lis[i].onmouseout = function () {
+                    this.getElementsByTagName("div")[0].style.display = "none";
+                };
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最爱课程页</title>
+    <style type="text/css">
+        #background {
+            background-image: url(images/个人爱好背景图.jpg);
+            background-size: 3000px 1000px;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+            float: left;
+            /* width: 260px;  */
+            /* height: px; */
+            padding-top: 35px;
+            padding-left: 650px;
+            /* margin-left: -20px; */
+            font-size: 25px;
+        }
+
+        #yemei {
+            /* width: 400px; */
+            /* height: 50px; */
+            float: right;
+            /* margin: 0; */
+            /* padding: 0; */
+            padding-top: 30px;
+            padding-right: 500px;
+        }
+
+        #sousuo {
+            width: 380px;
+            /* height: 40px; */
+            /* font-size: 25px; */
+            /* outline: none; */
+            float: right;
+            opacity: 0.4;
+            padding-top: 25px;
+        }
+
+        #shurukuang {
+            width: 170px;
+            height: 35px;
+            font-size: 20px;
+        }
+
+        #sousuokuang {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        #daohanglan {
+            /* height: 500px; */
+            padding-top: 120px;
+        }
+
+        #nav {
+            width: 600px;
+            height: 50px;
+            margin: 0 auto;
+            line-height: 50px;
+            list-style: none;
+            background-color: rgb(168, 22, 168);
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        #nav li {
+            float: left;
+            width: 120px;
+            text-align: center;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            display: block;
+            color: yellow;
+        }
+
+        #nav li a:hover {
+            /* background-color: red; */
+            opacity: 1.0;
+            color: pink;
+        }
+
+        #nav li div {
+            display: none;
+            /* background-color: brown; */
+            /* height: 0; */
+        }
+
+        #content {
+            width: 1200px;
+            height: 740px;
+        }
+
+        #sidebar {
+            width: 250px;
+            float: left;
+            padding-left: 30px;
+            position: fixed;
+        }
+
+        #main {
+            width: 750px;
+            height: 100px;
+            float: right;
+            padding-top: 50px;
+            padding-left: 550px;
+            position: fixed;
+        }
+
+        #ranking {
+            list-style-type: none;
+            padding-top: 50px;
+        }
+
+        #ranking h1 {
+            color: yellow;
+            opacity: 0.7;
+        }
+
+        #ranking a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        #ranking a:hover {
+            color: white;
+        }
+
+        #main img {
+            width: 130px;
+            height: 85px;
+        }
+
+        #main p {
+            text-align: justify;
+            font-size: 26px;
+        }
+
+        #main p:first-letter {
+            color: rgb(178, 238, 59);
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .left {
+            float: left;
+            border-right: 2px solid rgb(25, 160, 238);
+            border-bottom: 2px solid rgb(25, 160, 238);
+            transform: rotate(-10deg);
+        }
+
+        .right {
+            float: right;
+            border-left: 2px solid rgb(25, 160, 238);
+            border-bottom: 2px solid rgb(25, 160, 238)d;
+            transform: rotate(10deg);
+        }
+
+        #yejiao {
+            height: 50px;
+            line-height: 50px;
+            ;
+            /* margin-top: 10px; */
+            background-color: #8d9692;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background">
+        <div>
+            <div>
+                <p id="logo">欢迎来到夜小悊( •̀ ω •́ )的子页
+                    <br>
+                    看来你迫切地想了解我呢
+                </p>
+            </div>
+            <div id="yemei">
+                <form action="" id="sousuo">
+                    <input type="text" id="shurukuang" value="输入你想知道的">
+                    <input type="button" id="sousuokuang" value="搜索">
+                </form>
+            </div>
+        </div>
+        <div id="daohanglan">
+            <ul id="nav">
+                <li>
+                    <a href="#">web前端开发</a>
+                    <div>
+                        <a href="#">Html5Css3JS</a>
+                    </div>
+                <li>
+                    <a href="#">C语言</a>
+                    <div>
+                        <a href="#">结构化语言</a>
+                    </div>
+                <li>
+                    <a href="#">近现代史纲要</a>
+                    <div>
+                        <a href="#">1840年至今</a>
+                    </div>
+                <li>
+                    <a href="#">体育</a>
+                    <div>
+                        <a href="#">选修的是足球</a>
+                    </div>
+                <li>
+                    <a href="#">数学</a>
+                    <div>
+                        <a href="#">很可怕</a>
+                    </div>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <ul id="ranking">
+                    <br>
+                    <br>
+                    <h1>链接</h1>
+                    <br>
+                    <li><a href="index.html">首页</a></li>
+                    <br>
+                    <li><a href="个人爱好页.html">个人爱好页</a></li>
+                    <br>
+                    <li><a href="#">最爱课程页</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <img class="left" src="images/web.png" alt="">
+                <p>
+                    最喜欢学web前端开发啦，能够锻炼设计编排能力、手敲代码能力，刚发现写代码时开空调、听音乐非常的舒服~
+                </p>
+                <br>
+                <br>
+                <img class="right" src="images/C语言.jpg" alt="">
+                <p>
+                    C语言算是挺基础的一门课了，最重要的是给我们上课的孙老师人很好😀
+                </p>
+                <br>
+                <br>
+                <img class="left" src="images/近现代史纲要.jpg" alt="">
+                <p>
+                    我对历史一直都很感兴趣~学历史就像听故事一样，不过重要的是以古鉴今，带给了我许多人生启示。
+                </p>
+                <br>
+                <br>
+                <img class="right" src="images/体育.jpg" alt="">
+                <p>
+                    “身体是革命的本钱”，能够强身健体的体育课谁不爱呢，最重要的是不怎么需要动脑,,ԾㅂԾ,,
+                </p>
+                <br>
+                <br>
+                <img class="left" src="images/离散数学.jpg" alt="">
+                <p>
+                    数学有高等数学、离散数学、线性代数······只要是数学······呵呵🙂
+                </p>
+            </div>
+        </div>
+        <div id="yejiao">
+            <h2>
+                制作：夜悊
+            </h2>
+        </div>
+        <script>
+            var ulnav = document.getElementById("nav");
+            var lis = ulnav.getElementsByTagName("li");
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].onmouseover = function () {
+                    this.getElementsByTagName("div")[0].style.display = "block";
+                };
+                lis[i].onmouseout = function () {
+                    this.getElementsByTagName("div")[0].style.display = "none";
+                };
+            }
+        </script>
+    </div>
+</body>
+
+</html>
