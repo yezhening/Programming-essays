@@ -1,0 +1,20 @@
+shoptype: null
+shopId: null
+shopName: null
+shopPassword: null
+avgScore: null
+avePrice: null
+address: null
+phone: null
+shoptype: 北京火锅
+shopId: 98147680
+shopName: 重八牛府之小刀牛试（魏公村店）
+shopPassword: 1298147680
+avgScore: 5
+avePrice: 80
+address: 海淀区中关村南大街2号华宇时尚购物中心夹层（友谊宾馆对面）
+phone: 010-52786071
+food_id: 129771419, food_name: 重八招牌手打牛丸, food_price: 38
+food_id: 130179028, food_name: 重八特色秘制小料, food_price: 5
+Comment0: 每次都需要排好久好久的队的一家店但是味道还是不错的，否则也不能火这么多年最推荐的当然还是牛肉丸啦～手打的，服务员会拿到桌子上现做，口感非常扎实，丰富的牛肉香味小料可选择的挺多，但是还是最喜欢麻酱～另外还要推荐各种牛肉，牛肉和牛肉汤底相得益彰如果能少排队就好了
+Comment1: 【口味】味道一如既往的不错，是老顾客了经常在重八牛府的这家店吃，菜品非常新鲜，服务员也会逐一为我们介绍每道菜品粘哪个酱料会更鲜香。【服务】服务真的非常周到了，我们去的时候正好是假期饭点，等位久了一点店家附赠了冰粉，吃饭时也一直帮我们及时的更换料碟和加汤，服务贴心到我们都有一点点不好意思啦！【性价比】性价比很高！社群还有积分兑换，非常划算！
