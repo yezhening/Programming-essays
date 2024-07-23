@@ -669,7 +669,7 @@ void CreateAm(SqList2& L2, AmGraphSqList& A, AMGraph& G)//创建图
 	for (i = 0; i < MVNum; i++)
 		for (j = 0; j < MVNum; j++)
 			G.arcs[i][j] = MaxInt;
-	L2.elem[L2.length].shopname = "北林";
+	L2.elem[L2.length].shopname = "北京";
 	L2.length = L2.length + 1;
 	G.vexnum = L2.length;
 	for (i = 0; i < A.length; i++)
@@ -858,7 +858,7 @@ void ShortestPath_DIJ(SqList2& L2, AMGraph& G, string vex)
 	int i, v00, v11, n, v, min, w;
 	string v0, v1;
 
-	v0 = "北林";
+	v0 = "北京";
 	v1 = vex;
 
 	v00 = 845;
@@ -1337,7 +1337,7 @@ void FindShop(SqList& L, string useraccount, string password, SqList2& L2, HashT
 		}
 		cout << endl;
 
-		cout << "从北林到该商家的距离为：";
+		cout << "从北京到该商家的距离为：";
 		ShortestPath_DIJ(L2, G, shopname);
 
 		cout << endl;
@@ -1508,7 +1508,7 @@ void RecommendationFunction(SqList& L, string useraccount, string password, SqLi
 		L3.length = 0;
 
 		j = 0;
-		for (i = 0; i < L2.length - 1; i++)//最后一个放“北林”
+		for (i = 0; i < L2.length - 1; i++)//最后一个放“北京”
 		{
 			if (a[i] == i)
 			{
