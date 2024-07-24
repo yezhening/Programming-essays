@@ -1,0 +1,87 @@
+数据结构：
+UserLoginInformation：链表
+ShopLoginInformation：链表
+AdministratorLoginInformation：链表
+UserList：顺序表
+ShopList：顺序表
+OrderList:顺序表
+
+
+鲁棒：
+修改、删除个人信息后需要重新登录	信息登录表也需修改
+查询商家输入错误
+查询商家显示账号
+
+
+4813行
+
+
+
+
+UserLoginInformation：
+//获取成员变量....
+	public LinkedList<String> getUsersLoginTable()
+	{
+		return this.usersLoginTable;
+	}
+
+UserList:
+//获取成员变量
+	public ArrayList<User> getUserList()
+	{
+		return this.userList;
+	}
+
+
+shopsetget
+shiplistget
+商家显示格式
+登陆界面文本框变长
+修改账号重新登录
+修改账号更新登录表、订单表
+
+
+show.setText("菜品："+foodName+"预定失败！已不够所需份数或被抢光，请重新输入餐馆名称查询最新信息并重新预定。");
+
+
+	if(orderFlag==1)//预定成功才写入文件
+			{
+				//写入预定信息文件
+				try
+				{
+					//文件类
+					File f=new File("C:\\Users\\DSHH\\Desktop\\数据集\\order.txt");
+					
+					//文件字符输出流，字符缓冲输出流
+					FileWriter fw=new FileWriter(f,true);//追加
+					BufferedWriter bw=new BufferedWriter(fw);
+					
+					boolean flag=false;
+					Iterator<String> it=foodOrders.iterator();
+					while(it.hasNext())
+					{
+						String s=it.next();
+						if(flag)
+						{
+							String line="\n\n"+this.account+" "+shopOrder+" "+s;//第一行多写入一个回车
+							bw.write(line);
+							bw.newLine();
+							
+							flag=true;
+						}
+						else
+						{
+							String line=this.account+" "+shopOrder+" "+s;;
+						    bw.write(line);
+						    bw.newLine();
+						}
+					}
+					
+					//关闭流
+					bw.close();
+					fw.close();
+				}
+				catch(IOException ioe)
+				{
+					System.out.println(ioe);
+				}

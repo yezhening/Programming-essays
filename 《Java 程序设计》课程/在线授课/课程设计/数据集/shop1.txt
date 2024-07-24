@@ -1,0 +1,83 @@
+shoptype: 北京川湘菜
+shopId: 773682151
+shopName: 鼎坤朋湘菜馆
+shopPassword: 12773682151
+avgScore: 3.5
+avePrice: 70
+address: 海淀区玲珑路地铁6号线五路居站C出口右拐胡同南行200米路东
+phone: 13011202080
+food_id: 396890378, food_name: 招牌特色臭鳜鱼, food_price: 158
+food_id: 396886956, food_name: 长沙臭豆腐, food_price: 28
+food_id: 405872910, food_name: 钵子饭, food_price: 3
+food_id: 405872908, food_name: 炒米土鸡汤, food_price: 15
+food_id: 405872907, food_name: 农家小炒肉, food_price: 38
+food_id: 405872906, food_name: 双椒鱼头, food_price: 98
+food_id: 405872904, food_name: 石锅红薯粉, food_price: 38
+shopType: 北京火锅
+shopId: 1467844
+shopName: 福口居（北太平庄店）
+shopPassword: 121467844
+avgScore: 5
+avePrice: 63
+address: 海淀区北太平庄北三环中路40号（近国美）
+phone: 010-62382412
+food_id: 69968221, food_name: 极品羊肉, food_price: 32
+food_id: 10557933, food_name: 秘制酸梅汤, food_price: 28
+food_id: 7339478, food_name: 精品肥牛, food_price: 32
+food_id: 226325, food_name: 麻酱小料, food_price: 6
+food_id: 10558035, food_name: 鲜虾滑, food_price: 46
+food_id: 10557945, food_name: 芝麻烧饼, food_price: 2
+food_id: 484772, food_name: 火锅, food_price: 10
+food_id: 668793, food_name: 冻豆腐, food_price: 10
+food_id: 226323, food_name: 宽粉, food_price: 8
+food_id: 10558013, food_name: 手切鲜羊肉, food_price: 46
+food_id: 226320, food_name: 金针菇, food_price: 15
+food_id: 226319, food_name: 牛肉丸, food_price: 28
+food_id: 440630, food_name: 涮肉, food_price: 0
+food_id: 69968222, food_name: 秘制羊肉丸, food_price: 22
+food_id: 89981391, food_name: 极品肥牛, food_price: 25
+food_id: 2030553, food_name: 青岛啤酒, food_price: 0
+food_id: 2154656, food_name: 蒿子秆, food_price: 10
+food_id: 1670243, food_name: 菜汁面, food_price: 8
+food_id: 2162072, food_name: 蔬菜拼盘, food_price: 28
+food_id: 1684644, food_name: 太阳肉, food_price: 59
+food_id: 130168739, food_name: 鲜牛羊组合, food_price: 88
+food_id: 130168772, food_name: 精选高钙肉, food_price: 48
+food_id: 1492254, food_name: 特价肥牛, food_price: 0
+food_id: 130168737, food_name: 沙葱羊肉, food_price: 78
+food_id: 130168730, food_name: 黑白叶, food_price: 48
+food_id: 8785014, food_name: 金牌麻酱, food_price: 8
+food_id: 1611673, food_name: 油豆皮, food_price: 10
+food_id: 2505231, food_name: 菌类拼盘, food_price: 30
+food_id: 1176343, food_name: 牛骨髓, food_price: 46
+food_id: 81404977, food_name: 番茄锅, food_price: 10
+food_id: 72827472, food_name: 梅林午餐肉, food_price: 18
+food_id: 10557909, food_name: 自制豆浆, food_price: 20
+food_id: 61393492, food_name: 香辣锅, food_price: 12
+food_id: 339415624, food_name: 蒜泥, food_price: 6
+food_id: 101726566, food_name: 五彩面, food_price: 12
+food_id: 2202440, food_name: 鱼豆腐, food_price: 15
+food_id: 1151780, food_name: 菌汤锅, food_price: 10
+food_id: 501541, food_name: 鸭血, food_price: 12
+food_id: 89981395, food_name: 龙利鱼, food_price: 35
+food_id: 2054283, food_name: 羊上脑, food_price: 32
+food_id: 1321714, food_name: 手擀面, food_price: 7
+food_id: 7118818, food_name: 大拌菜, food_price: 0
+food_id: 1298123, food_name: 羊筋肉, food_price: 32
+food_id: 541159, food_name: 羊羔肉, food_price: 0
+food_id: 10558014, food_name: 鲜鱼滑, food_price: 28
+food_id: 10557989, food_name: 鱼虾滑双拼, food_price: 38
+food_id: 169800657, food_name: 小布丁雪糕, food_price: 0
+food_id: 220713663, food_name: 炸灌肠, food_price: 16
+food_id: 14308960, food_name: 麻酱调料, food_price: 6
+food_id: 1068800, food_name: 火烧, food_price: 3
+Comment0: 菜量很大 三个人吃了双人餐又点了两个菜 吃的饱饱的 服务态度也非常好 点菜时点多了 阿姨还跟我们说不用太多 不够再加 点名表扬小油条和鱼豆腐 非常好吃 麻酱味道也很不错 菜很新鲜 肉质也不错 环境也很高大上 下次要尝一尝羊上脑
+Comment1: 团的4人套餐，量多少有点儿不够，又加了一些，铜锅吃起来还是很舒服的。吃火锅，还真是费酒啊，4个人不知不觉就喝了一件儿，差不多够再点三盘肉了，以后一定要克制，少喝酒，多吃肉。整体来说，环境不错，菜品味道也可以，当然也可能是因为一起吃饭的人的关系。
+Comment2: 排队15桌才吃上，环境还不错，很热闹。好吃好吃好吃，分量也不小。剩了好多，负罪感满满。饮料应该与水等比例稀释过，喝着味道怪怪的。上菜时候还背顺口溜，不知道什么时候加的花样。但是请服务人员背的时候看看人好不好，不是情侣不是情侣不是情侣！带晚辈去吃的，听着尴尬的不行。
+Comment3: 服务态度非常好，肉质鲜美，服务周到，店里的薛姐更是细心热情，小零食，饮料不限量，棒棒哒！
+Comment4: 关键不错，团购的二人餐。菜量足够青菜基本没吃就已经很撑了。芝麻酱不是自助的
+Comment5: 服务的阿姨态度超级好！！！菜品份量很足！环境也非常好！！！中秋节还送了小月饼哈哈哈哈会再次光顾哒～
+Comment6: 一人一个小火锅很方便，菜也很齐全新鲜，我们宿舍四个姑娘点了四人套餐最后剩挺多的，没吃完，还送了水果拼盘
+Comment7: 餐厅环境不错，二楼环境相对一楼更耐斯～满口福拼盘比想象中的好，里面包含了五六种新鲜蔬菜，很良心。服务员姐姐很周到，赠送了凉菜，辣锅太辣了，主动帮忙撇红油，还送上雪糕??
+Comment8: 0011服务态度一级棒  很温柔的美女服务员！以后还来
+Comment9: 好吃，划算，团购菜品很丰富！点赞

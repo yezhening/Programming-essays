@@ -1,0 +1,102 @@
+<!DOCtype HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html';charest=gb2312">
+    <!--<meta>标签可提供有关页面的元信息,属性定义了与文档相关联的名称/值对-->
+    <!--http-equiv属性为名称/值对提供了名称。并指示服务器在发送实际的文档之前先在要传送给浏览器的 MIME 文档头部包含名称/值对。
+    当服务器向浏览器发送文档时，会先发送许多名称/值对。虽然有些服务器会发送许多这种名称/值对，但是所有服务器都至少要发送一个：content-type:text/html。这将告诉浏览器准备接受一个HTML 文档。
+    使用带有 http-equiv 属性的 <meta> 标签时，服务器将把名称/值对添加到发送给浏览器的内容头部。-->
+    <title>填写用户注册信息并存入数据库</title>
+    <!--bootstrap-->
+    <link href="bootstrap2\bootstrap\css\bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <form action="writedatabase.php" method="POST" enctype="multipart/form-data" name="form1" class="form-horizontal">
+        <!--multipart/form-data是指表单数据有多部分构成，既有文本数据，又有文件等二进制数据-->
+        <div class="control-group">
+            <label class="control-label">用户注册</label>
+        </div>
+
+
+
+        <table width="552" border="2" cellpadding="2" cellspacing="1">
+            <tr align="center">
+                <td height="33" colspan="2"><span class="style1">用户注册</span></td>
+                <!--colspan规定单元格可横跨的列数 span>用来组合文档中的行内元素-->
+            </tr>
+            <!--align文档中的一个部分居中对齐-->
+            <tr>
+                <td width="99" height="24" align="right">昵称：</td>
+                <td width="290" height="24" align="left"><input name="user" type="text" id="user" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">密码：</td>
+                <td width="24" align="left"><input name="pwd" type="password" id="pwd" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">性别：</td>
+                <td width="24" align="left"><input name="sex" type="radio" value="男" checked>男<input name="sex"
+                        type="radio">女</td>
+            </tr>
+            <tr>
+                <td width="24" align="right">学历：</td>
+                <td width="24" align="left"><select name="select">
+                        <option value="高中">高中</option>
+                        <option value="专科">专科</option>
+                        <option value="本科" selected>本科</option>
+                        <option value="研究生">研究生</option>
+                        <option value="博士生">博士生</option>
+                        <option value="硕士生">硕士生</option>
+                        <!--value 规定在表单被提交时被发送到服务器的值-->
+                    </select></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">联系方式：</td>
+                <td width="24" align="left"><input name="tel" type="text" id="tel" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">E-mail:</td>
+                <td width="24" align="left"><input name="email" type="text" id="email" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">个人主页:</td>
+                <td width="24" align="left"><input name="homepage" type="text" id="homepage" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td width="24" align="right">个人爱好:</td>
+                <td width="24" align="left"><input name="like[]" type="checkbox" id="like[]" value="购物">购物
+                    <input name="like[]" type="checkbox" id="like[]" value="上网">上网
+                    <input name="like[]" type="checkbox" id="like[]" value="看电影">看电影
+                    <input name="like[]" type="checkbox" id="like[]" value="旅游">旅游</td>>
+                <!--value指这个复选框的值-->
+            </tr>
+            <tr>
+                <td width="24" align="right">我的照片:</td>
+                <td width="24" align="left"><input name="photo" type="file" id="photo" size="25"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right">个人简介:</td>
+                <td width="24" align="left"><textarea name="instr" cols="35" rows="4" id="instr"></textarea></td>
+            </tr>
+            <tr align="center">
+                <td height="33" colspan="3"><input type="submit" name="Submit" value="注册">&nbsp;&nbsp;<input
+                        type="reset" name="Submit2" value="重置"></td>
+            </tr>
+        </table>
+        <!--table定义 HTML 表格 tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
+        <!--border规定表格边框的宽度 cellpadding规定单元边沿与其内容之间的空白 cellspacing规定单元格之间的空白 bgcolor规定表格的背景颜色-->
+    </form>
+
+
+    <!--bootstrap-->
+    <script src="bootstrap2\bootstrap\js\jquery.js"></script>
+    <script src="bootstrap2\bootstrap\js\bootstrap.min.js"></script>
+</body>
+
+
+
+</html>

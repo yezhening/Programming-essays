@@ -1,0 +1,35 @@
+<html>
+    <head><title>Addition</title></head>
+
+    <body>
+        <?php
+            @$add1=$_POST['num1'];
+            @$add2=$_POST['num2'];
+        ?>
+
+        <form name="addition" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+            num1:
+            <input type="text" name="num1"/>
+            <br/>
+            num2:
+            <input type="text" name="num2"/>
+            <br/>
+            <input type="submit" name="submit" value="add"/>
+            <input type="reset" name="reset" value="reset"/>
+        </form>
+
+        <?php
+            if(!is_null($add1&&$add2))
+            {
+                if(is_numeric($add1)&&is_numeric($add2))
+                {
+                    if((strpos($add1,'.')==true)&&(strpos($add2,'.')==true))
+                    {
+                        $sum=$add1+$add2;
+                        printf("%.2f + %.2f = %.2f",$add1,$add2,$sum);
+                    } 
+                }    
+            }
+        ?>
+    </body>
+</html>

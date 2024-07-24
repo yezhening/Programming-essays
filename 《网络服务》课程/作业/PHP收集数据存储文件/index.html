@@ -1,0 +1,104 @@
+<!DOCtype HTML>
+
+<!--DOCtype声明文档类型-->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html';charest=gb2312">
+    <!--meta提供有关页面内的元信息 http-equiv把 content 属性关联到 HTTP 头部 content定义与 http-equiv 或 name 属性相关的元信息-->
+    <title>填写并输出用户注册信息</title>
+    <style type="text/css">
+    </style>
+    <!--.style1{
+            color: #000000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    -->
+    <!--style为 HTML 文档定义样式信息-->
+    <!--.选择拥有特定 class 的元素-->
+</head>
+
+<body>
+    <form action="process.php" method="POST" enctype="multipart/form-data" name="form1">
+        <table width="552" border="2" cellpadding="2" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#FFCC66">
+            <tr align="center" bgcolor="#FFCC00">
+                <td height="33" colspan="2"><span class="style1">用户注册</span></td>
+                <!--colspan规定单元格可横跨的列数 span>用来组合文档中的行内元素-->
+            </tr>
+            <!--align文档中的一个部分居中对齐-->
+            <tr>
+                <td width="99" height="24" align="right" bgcolor="#FFFFCC">昵称：</td>
+                <td width="290" height="24" align="left" bgcolor="#FFFFFF"><input name="user" type="text" id="user"
+                        size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">密码：</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="pwd" type="password" id="pwd" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">性别：</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="sex" type="radio" value="男" checked>男<input
+                        name="sex" type="radio">女</td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">学历：</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><select name="select">
+                        <option value="高中">高中</option>
+                        <option value="专科">专科</option>
+                        <option value="本科" selected>本科</option>
+                        <option value="研究生">研究生</option>
+                        <option value="博士生">博士生</option>
+                        <option value="硕士生">硕士生</option>
+                        <!--value 规定在表单被提交时被发送到服务器的值-->
+                    </select></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">联系方式：</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="tel" type="text" id="tel" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">E-mail:</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="email" type="text" id="email" size="30"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">个人主页:</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="homepage" type="text" id="homepage"
+                        size="30">
+                </td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">个人爱好:</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="like[]" type="checkbox" id="like[]"
+                        value="购物">购物
+                    <input name="like[]" type="checkbox" id="like[]" value="上网">上网
+                    <input name="like[]" type="checkbox" id="like[]" value="看电影">看电影
+                    <input name="like[]" type="checkbox" id="like[]" value="旅游">旅游
+                </td>>
+                <!--value指这个复选框的值-->
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">我的照片:</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><input name="photo" type="file" id="photo" size="25"></td>
+            </tr>
+            <tr>
+                <td width="24" align="right" bgcolor="#FFFFCC">个人简介:</td>
+                <td width="24" align="left" bgcolor="#FFFFFF"><textarea name="instr" cols="35" rows="4"
+                        id="instr"></textarea></td>
+            </tr>
+            <tr align="center" bgcolor="#FFCC00">
+                <td height="33" colspan="3"><input type="submit" name="Submit" value="注册">&nbsp;&nbsp;<input
+                        type="reset" name="Submit2" value="重置"></td>
+                <!--colspan规定单元格可横跨的列数 span>用来组合文档中的行内元素。-->
+            </tr>
+        </table>
+        <!--table定义 HTML 表格 tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
+        <!--border规定表格边框的宽度 cellpadding规定单元边沿与其内容之间的空白 cellspacing规定单元格之间的空白 bgcolor规定表格的背景颜色-->
+    </form>
+
+
+</body>
+
+
+
+</html>

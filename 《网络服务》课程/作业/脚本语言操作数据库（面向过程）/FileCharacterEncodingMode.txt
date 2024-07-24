@@ -1,0 +1,4 @@
+database、datatable:utf8
+index2.html:gb2312
+writedatabase.php:utf8
+readdatabase.php:gb2312
