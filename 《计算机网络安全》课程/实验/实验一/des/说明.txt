@@ -1,0 +1,11 @@
+文件：
+.vscode：VS Code环境编译C++语言的配置文件
+des.h：头文件
+des.cpp：源文件
+main.cpp：源文件
+main.exe：可执行文件
+说明.txt：说明文件
+
+运行：
+纯C++语言文件，使用C++编译器/环境正常运行
+注意：多文件同时编译，运行main.exe即可
