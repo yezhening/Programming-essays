@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Experiment2</title>
+
+    <style type="text/css">
+        .displaybox {
+            width: 150px;
+            background-color: #cccccc;
+            border: 2px solid #000000;
+            padding: 10px;
+            /* 区域在左，按钮在右 */
+            float: left;
+        }
+    </style>
+
+    <script type="text/javascript">
+        //创建XMLHttpRequest对象
+        function getXMLHttpRequest() {
+            var req;
+            req = new XMLHttpRequest();
+            return req;
+        }
+
+        //取对象
+        var http = getXMLHttpRequest();
+
+        //指定点击事件
+        function getRandom(flag) {
+            //定义全局变量，判断是哪个按钮的点击事件
+            judge = flag;
+
+            //创建http请求
+            var url = 'http://211.71.149.251:12705/Experiment2.php';
+            var rand = parseInt(Math.random() * 999999999999999);
+            var modurl = url + "?rand=" + rand;
+            //创建http请求
+            http.open("GET", modurl, true);
+            //注册回调函数
+            http.onreadystatechange = useHttpResponse;
+            http.send(null);
+        }
+
+        //回调函数
+        function useHttpResponse() {
+            if (judge == '1') {
+                if (http.readyState == 4) {
+                    if (http.status == 200) {
+                        var random = http.responseXML.getElementsByTagName("random")[0];//取的是对象：[object Element]
+                        document.getElementById('showRandom1').innerHTML = random.childNodes[0].nodeValue;//需要childNodes[0]
+                    }
+                    else {
+                        document.getElementsByClassName('showRandom1').innerHTML = "<p>Error</p>"
+                    }
+                }
+            }
+            else {
+                if (http.readyState == 4) {
+                    if (http.status == 200) {
+                        var random = http.responseXML.getElementsByTagName("random")[0];//取的是对象：[object Element]
+                        document.getElementById('showRandom2').innerHTML = random.childNodes[0].nodeValue;//需要childNodes[0]
+                    }
+                    else {
+                        document.getElementsByClassName('showRandom2').innerHTML = "<p>Error</p>"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div id="showRandom1" class="displayBox"></div>
+        <input type="button" value="触发按钮" onclick="getRandom('1')">
+    </div>
+    <br>
+    <div>
+        <div id="showRandom2" class="displayBox"></div>
+        <input type="button" value="触发按钮" onclick="getRandom('2')">
+    </div>
+</body>
+
+</html>

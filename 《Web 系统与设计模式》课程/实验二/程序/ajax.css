@@ -1,0 +1,7 @@
+.displaybox {
+            width: 150px;
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            padding: 10px;
+            font: 24px normal verdana, belvetica, arial, sans-serif;
+        }

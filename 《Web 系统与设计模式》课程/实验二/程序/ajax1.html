@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Ajax Demonstration</title>
+    <style>
+        .displaybox {
+            width: 150px;
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            padding: 10px;
+            font: 24px normal verdana, helvetica, arial, sans-serif;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        function getXMLHttpRequest() {
+            var req = new XMLHttpRequest();
+            return req;
+        }
+
+        var http = getXMLHttpRequest();
+
+        function getServerTime() {
+            var myurl = 'http://211.71.149.251:12705/telltimeXML.php';
+            var myRand = parseInt(Math.random() * 999999999999999);
+            var modurl = myurl + "?rand=" + myRand;
+            http.open("GET", modurl, true);
+            http.onreadystatechange = useHttpResponse;
+            http.send(null);
+        }
+
+        function useHttpResponse() {
+            if (http.readyState == 4) {
+                if (http.status == 200) {
+                    var timeValue = http.responseXML.getElementsByTagName("timenow")[0];
+                    document.getElementById('showtime').innerHTML = timeValue.childNodes[0].nodeValue;
+                }
+            } else {
+                document.getElementById('showtime').innerHTML = '<img src="ajaxLoad.jpg">';
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color:#cccccc" onLoad="getServerTime()">
+    <center>
+        <h1>Ajax Demonstration</h1>
+        <h2>Getting the server time without page refresh</h2>
+        <form>
+            <input type="button" value="Get Server Time" onClick="getServerTime()">
+        </form>
+
+        <div id="showtime" class="displaybox"></div>
+    </center>
+</body>
+
+</html>
