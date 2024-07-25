@@ -1,0 +1,11 @@
+<h1>学生作业信息</h1>
+{% if student and course and studentHomework %}
+<ul>
+    <li>
+        <p>学生姓名：{{student.sn}}，课程名：{{course.cn}}，课程号{{course.cno}}，作业1成绩：{{studentHomework.h1s}}，作业2成绩：{{studentHomework.h2s}}，作业3成绩：{{studentHomework.h3s}}
+        </p>
+    </li>
+</ul>
+{% else %}
+<p>No studentHomeworks are available.</p>
+{% endif %}

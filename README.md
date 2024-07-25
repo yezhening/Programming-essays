@@ -1,7 +1,5 @@
 # 编程随笔（Programming-essays）
 
-[TOC]
-
 记录日常编程的随笔
 
 有精炼的内容，但也是“垃圾桶”
@@ -27,11 +25,13 @@
 - 《操作系统 A》课程/实验/实验二/生产者与消费者（综合性实验）C代码.cpp
 - 《操作系统 A》课程/课程设计/实习代码：文件系统（C语言）.cpp
 - 《Java 程序设计》课程/在线授课/课程设计/MeituanMIS/：美团餐馆菜品预定系统
-- 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密
-- 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密
-- 《计算机网络安全》课程/实验实验二/：DES 密码算法的加解密和支持部分工作模式
-- 《计算机网络安全》课程/实验实验四/：DH 密码算法的加解密
-- 《专业实践二》课程/：野外数据监测系统
+- 《数据库系统》课程/基础实践/基础实践二/Ex3/：将关系型数据库向面向对象程序转换并使用 DAO 技术构建朴素数据库持久层（Python）
+- 《数据库系统》课程/课程设计/过程.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
+- 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密（C++）
+- 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密（C++）
+- 《计算机网络安全》课程/实验实验二/：DES 密码算法的加解密和支持部分工作模式（C++）
+- 《计算机网络安全》课程/实验实验四/：DH 密码算法的加解密（C++）
+- 《网络工程综合专业实践》课程/：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
 
 # 三、主要内容
 
@@ -180,10 +180,6 @@
 - 个人爱好页.html：介绍个人爱好
 - 最爱课程页.html：介绍个人最爱课程
 
-## 《专业实践二》课程/
-
-- **one.png、two.png、three.png：野外数据监测系统**
-
 ## 《操作系统 A》课程/
 
 实验/实验一/
@@ -201,6 +197,28 @@
 课程设计/
 
 - **实习代码：文件系统（C语言）.cpp**
+
+## 《数据库系统》课程/
+
+基础实践/基础实践二/
+
+- **Ex3/：将关系型数据库向面向对象程序转换并使用 DAO 技术构建朴素数据库持久层（Python）**
+
+基础实践/基础实践二/Ex2/
+
+- example1.py 和 example2.py：使用 pymssql 连接 SQL Server 的示例
+- two1.py、two2.py 和 two3.py：使用 pymssql 连接 SQL Server 并操作
+- three1.py、three2.py 和 three3.py：构建朴素的数据库连接池并操作
+- four.py 和 four1.py：使用 DBUtils 构建数据库连接池并操作
+
+基础实践/基础实践四/
+
+- education/：使用 Django 编写 Web 系统
+- mysite/：学习 Django 编写 Web 系统
+
+课程设计/
+
+- **过程.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）**
 
 ## 《数据结构 A》课程/
 
@@ -259,6 +277,10 @@ OJ/OJ2栈和队列
 
 - **销售业绩管理系统.c**
 
+## 《网络工程综合专业实践》课程/
+
+- **one.png、two.png、three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）**
+
 ## 《网络服务》课程/
 
 作业/
@@ -280,10 +302,10 @@ OJ/OJ2栈和队列
 
 实验
 
-- **实验一/：DES 密码算法的加解密**
-- **实验三/：RSA 密码算法的加解密**
-- **实验二/：DES 密码算法的加解密和支持部分工作模式**
-- **实验四/：DH 密码算法的加解密**
+- **实验一/：DES 密码算法的加解密（C++）**
+- **实验三/：RSA 密码算法的加解密（C++）**
+- **实验二/：DES 密码算法的加解密和支持部分工作模式（C++）**
+- **实验四/：DH 密码算法的加解密（C++）**
 
 ## 《高级数据库技术》课程/
 
@@ -347,11 +369,12 @@ demand_one.sql
 - 《操作系统 A》
 - 《Java 程序设计》
 - 《网络服务》
+- 《数据库系统》
 
 2022
 
 - 《计算机网络安全》
-- 《专业实践二》
+- 《网络工程综合专业实践》
 
 2023
 
@@ -372,7 +395,9 @@ demand_one.sql
 
   《Web 前端开发》课程的实验四
 
-  《专业实践二》课程（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
+  《数据库系统》课程的的课程设计（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
+
+  《网络工程综合专业实践》课程（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
 
 - 大部分非个人完成的代码：
 
@@ -384,16 +409,22 @@ demand_one.sql
 
   《Java 程序设计》课程的课程设计的数据集
 
-- 与计算机相对无关的内容：
+- 与编程相对无关的内容：
 
   《计算机网络》课程的实验（使用 Wireshark 和 GNS3）
 
   《数字通信》课程的实验（使用 MATLAB）
+
+  《综合布线》课程的课程设计（使用 AutoCAD）
+
+  《交换与路由》课程的作业和实验（使用 Wireshark、Cisco Packet Tracer 和 GNS3）
 
   《计算机网络安全》课程的部分实验（使用 OpenSSL 和 Wireshark）
 
 - 相对繁杂的内容：
 
   《网络服务》课程的部分作业和实验（Linux 运维相关）
+
+  《数据库系统》课程的实验和部分基础实践（SQL Server 相关）
 
 - ...

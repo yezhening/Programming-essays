@@ -1,0 +1,16 @@
+单数据库			多数据库
+student——studentDAO——DAOFactory——DAOBase——DAO
+
+studentDAO：
+每个对象都要有
+以DAO后缀
+有添加删除修改检索方法
+
+student：
+主函数实例化studentDAO并调用其方法
+
+一个典型的Struts应用程序有多个DAO类。DAO类的实例需要一种统一的方式来获取连接对象以访问数据源。
+因此，拥有一个提供getConnection方法的DAO接口和一个提供该方法实现的DAOBase类是很方便的。
+然后，所有DAO类都扩展了DAOBase类
+
+SQL语句为静态

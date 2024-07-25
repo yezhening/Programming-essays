@@ -1,0 +1,13 @@
+<h1>学生作业信息</h1>
+{% if results %}
+<ul>
+    {% for result in results %}
+    <li>
+        <!-- 对于课程号、学号，result.cno是对象，还需要再“.”其属性 -->
+        <p>课程号：{{result.cno.cno}}，学号：{{result.sno.sno}}，作业1成绩：{{result.h1s}}，作业2成绩：{{result.h2s}}，作业3成绩：{{result.h3s}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No studentHomeworks are available.</p>
+{% endif %}

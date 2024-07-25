@@ -1,0 +1,6 @@
+anoconda安装python的pymssql包
+
+vscode使用anoconda的base环境
+
+直接使用pip安装即可
+数据库创建yz账户，密码为yz

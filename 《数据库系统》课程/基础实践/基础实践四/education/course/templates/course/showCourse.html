@@ -1,0 +1,12 @@
+<h1>课程信息</h1>
+{% if results %}
+<ul>
+    {% for result in results %}
+    <li>
+        <p>课程号：{{result.cno}}，课程名：{{result.cn}}，课程学分：{{result.cc}}，课程学时：{{result.ch}}，课程教师：{{result.ct}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No courses are available.</p>
+{% endif %}

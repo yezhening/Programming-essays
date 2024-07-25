@@ -1,0 +1,1 @@
+过程.png：研究生培养环节和成果认定综合管理系统.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）

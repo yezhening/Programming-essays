@@ -1,0 +1,12 @@
+<h1>学生信息</h1>
+{% if results %}
+    <ul>
+        {% for result in results %}
+            <!-- 超链接，传学生学号给路由 -->
+            <li><a href="/course/{{ result.sno }}/"><p>学号：{{result.sno}}，姓名：{{result.sn}}，性别：{{result.sex}}，专业班级：{{result.majcla}}，生日日期：{{result.bir}}，联系电话：{{result.tel}}
+            </p></a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No students are available.</p>
+{% endif %}
