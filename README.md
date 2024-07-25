@@ -27,11 +27,12 @@
 - 《Java 程序设计》课程/在线授课/课程设计/MeituanMIS/：美团餐馆菜品预定系统
 - 《数据库系统》课程/基础实践/基础实践二/Ex3/：将关系型数据库向面向对象程序转换并使用 DAO 技术构建朴素数据库持久层（Python）
 - 《数据库系统》课程/课程设计/过程.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
+- 《传输网络》课程/实验一/a.c：基带信道加解扰编程
 - 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验二/：DES 密码算法的加解密和支持部分工作模式（C++）
 - 《计算机网络安全》课程/实验实验四/：DH 密码算法的加解密（C++）
-- 《网络工程综合专业实践》课程/：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
+- 《网络工程综合专业实践》课程/one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
 
 # 三、主要内容
 
@@ -146,6 +147,10 @@
 - **MeituanMIS/：美团餐馆菜品预定系统**
 
 慕课作业/：第一至八章作业
+
+## 《传输网络》课程/实验一/
+
+- **a.c：基带信道加解扰编程**
 
 ## 《Web 前端开发》课程/
 
@@ -279,7 +284,7 @@ OJ/OJ2栈和队列
 
 ## 《网络工程综合专业实践》课程/
 
-- **one.png、two.png、three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）**
+- **one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）**
 
 ## 《网络服务》课程/
 
@@ -370,6 +375,7 @@ demand_one.sql
 - 《Java 程序设计》
 - 《网络服务》
 - 《数据库系统》
+- 《传输网络》
 
 2022
 
@@ -416,6 +422,8 @@ demand_one.sql
   《数字通信》课程的实验（使用 MATLAB）
 
   《综合布线》课程的课程设计（使用 AutoCAD）
+
+  《传输网络》课程的大部分实验
 
   《交换与路由》课程的作业和实验（使用 Wireshark、Cisco Packet Tracer 和 GNS3）
 
