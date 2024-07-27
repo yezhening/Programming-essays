@@ -1,0 +1,2 @@
+ricardo-virtual-machine
+0.10 0.07 0.01 1/670 19010

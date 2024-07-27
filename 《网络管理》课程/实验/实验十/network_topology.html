@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network topology</title>
+
+    <!-- Css、Js文件 -->
+    <link rel="stylesheet" href="./vis-4.21.0/dist/vis-network.min.css">
+    <script src="./vis-4.21.0/dist/vis.js"></script>
+
+    <!-- Css -->
+    <style>
+        /* 网络拓扑区域/容器宽高 */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #network_topology {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 网络拓扑区域/容器 -->
+    <div id="network_topology"></div>
+
+    <!-- Js -->
+    <script>
+        // （全局）变量
+        var edge_length = 350;//边长
+
+        var legend_domain = document.getElementById('network_topology');//标记区域
+        var legend_x = - legend_domain.clientWidth;//标记的横坐标
+        var legend_y = - legend_domain.clientHeight;//标记的纵坐标
+
+        // 节点数据数组
+        var nodes = new vis.DataSet
+            ([
+                //设备
+                { id: 1, label: '172.16.30.1 6/2/1 ms', group: 'desktop' },
+                { id: 2, label: '222.28.124.254', group: 'switch' },
+                { id: 3, label: '192.168.115.105', group: 'switch' },
+                { id: 4, label: '10.1.1.1', group: 'router' },
+                { id: 5, label: '61.148.29.225', group: 'internet' },
+
+                { id: 6, label: '211.71.149.251 6/2/1 ms', group: 'desktop' },
+                { id: 7, label: '211.71.149.254', group: 'switch' },
+                { id: 8, label: '192.168.149.1', group: 'switch' },
+
+                //标记
+                { id: 1000, label: 'desktop', group: 'desktop', x: legend_x, y: legend_y, fixed: true },
+                { id: 1001, label: 'switch', group: 'switch', x: legend_x, y: legend_y + 100, fixed: true },
+                { id: 1002, label: 'router', group: 'router', x: legend_x, y: legend_y + 200, fixed: true },
+                { id: 1003, label: 'internet', group: 'internet', x: legend_x, y: legend_y + 300, fixed: true }
+            ]);
+
+        // 边数据数组
+        var edges = new vis.DataSet
+            ([
+                { from: 1, to: 2, label: '14/60/7 ms', length: edge_length, width: 10 },
+                { from: 2, to: 3, label: '143/146/257 ms', length: edge_length, width: 20 },
+                { from: 3, to: 4, label: '4/3/6 ms', length: edge_length, width: 1 },
+                { from: 4, to: 5, label: '6/3/4 ms', length: edge_length, width: 1 },
+
+                { from: 6, to: 7, label: '14/60/7 ms', length: edge_length, width: 10 },
+                { from: 7, to: 8, label: '143/146/257 ms', length: edge_length, width: 20 },
+                { from: 8, to: 4, label: '4/3/6 ms', length: edge_length, width: 1 },
+            ]);
+
+        // 容器 1
+        var container = document.getElementById('network_topology');
+
+        // 数据  2
+        var data =
+        {
+            nodes: nodes,
+            edges: edges
+        };
+
+        // 选项 3
+        var options =
+        {
+            // 组：形状和颜色
+            groups:
+            {
+                // 台式机
+                desktop:
+                {
+                    shape: 'square',
+                    color: 'red',
+                },
+                // 交换机
+                switch:
+                {
+                    shape: 'triangle',
+                    color: 'orange',
+                },
+                // 网关路由器
+                router:
+                {
+                    shape: 'dot',
+                    color: 'yellow',
+                },
+                // 因特网
+                internet:
+                {
+                    shape: 'diamond',
+                    color: "green"
+                }
+            },
+
+            //边
+            edges:
+            {
+                smooth: false   //直线而不是曲线
+            },
+
+            //物理引擎
+            physics:
+            {
+                barnesHut: { gravitationalConstant: -10000 },    //重力吸引  负数为斥力
+            }
+        };
+
+        //初始化网络拓扑
+        var network_topology = new vis.Network(container, data, options);
+    </script>
+
+</body>
+
+</html>
