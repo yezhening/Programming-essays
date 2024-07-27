@@ -6,16 +6,17 @@
 
 有精炼的内容，但也是“垃圾桶”
 
-# 一、注
+# 一、注意必看
 
-- 代码仅供参考，部分不能直接运行，请自行搭建环境~
+- **代码请勿用作商业用途，代码来源未用作商业用途**
+- 代码仅供参考学习，部分不能直接运行，请自行搭建环境~
 - 
-- 课程内容过多，整理时难免有疏漏，若有不合适内容（版权或敏感信息等）非常抱歉，提醒会删除！
-- 课程的部分内容非个人所有版权，仅展示部分效果图片，不开放代码
+- **课程的内容过多，整理时难免有疏漏，若有不合适内容（版权或敏感信息等）非常抱歉，提醒会删除！**
+- **课程的部分内容非个人所有版权，仅展示部分效果图片，不开放代码**
 - 课程年份是代码编写的真实年份，除修改少量内容（版权或敏感信息等）外均无改动，为个人学习编写并有大量详细注释！
-- 2019-2023 年份的课程（除《高级算法设计与分析》课程）代码，都不包含 AI 辅助！
-- 部分 C 或 C++ 代码使用 Microsoft Visual Studio 推荐的“更安全函数”如“scanf_s()”，可能需要修改为“scanf()”
-- 部分 Java 、HTML 或 PHP 代码可能需要使用 GB2312 字符编码
+- 2019-2023 年份课程（除《高级算法设计与分析》课程）的代码，都不包含 AI 辅助！
+- 课程的部分 C 或 C++ 代码使用 Microsoft Visual Studio 推荐的“更安全函数”如“scanf_s()”，可能需要修改为“scanf()”
+- 课程的部分 Java 、PHP 或 HTML 代码可能需要使用“GB2312”字符编码
 
 # 二、高质量内容
 
@@ -33,18 +34,17 @@
 - 《数据库系统》课程/课程设计/过程.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
 - 《传输网络》课程/实验一/a.c：基带信道加解扰编程
 - 《网络管理》课程/作业/作业三/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码（C）
-- 《网络管理》课程/作业/作业九/：基于 SNMP 获取/监控服务端指标、存储并显示（Memcached 和 PHP）
-
+- 《网络管理》课程/作业/作业九/：基于 SNMP 获取/监控服务端指标、存储并显示（Memcached、PHP）
 - 《网络管理》课程/作业/作业五/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码改进二（C）
-- 《网络管理》课程/作业/作业六/：基于 SNMP 获取/监控服务端指标、显示并存储（MySQL 和 PHP）
+- 《网络管理》课程/作业/作业六/：基于 SNMP 获取/监控服务端指标、显示并存储（MySQL、PHP）
 - 《网络管理》课程/作业/作业四/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码改进一（C）
 - 《网络管理》课程/实验/实验一/：基于 SNMP 库轮询异步获取/监控服务端指标、在内外存存储并定时刷新页面显示（Memcached、MySQL、PHP、C、ECharts）
-
+- 《校级第八届中国国际“互联网+”大学生创新创业大赛》项目/*.png：《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（Bootstrap、jQuery、JavaScript、CSS、HTML）
 - 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验二/：DES 密码算法的加解密和支持部分工作模式（C++）
 - 《计算机网络安全》课程/实验实验四/：DH 密码算法的加解密（C++）
-- 《网络工程综合专业实践》课程/one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
+- 《网络工程综合专业实践》课程/one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
 
 # 三、主要内容
 
@@ -285,6 +285,10 @@ OJ/OJ2栈和队列
 
 - **美团餐馆预定管理信息系统.cpp**
 
+## 《校级第八届中国国际“互联网+”大学生创新创业大赛》项目
+
+- **./*.png：《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（Bootstrap、jQuery、JavaScript、CSS、HTML）**
+
 ## 《程序设计基础》课程/
 
 实验/
@@ -300,7 +304,7 @@ OJ/OJ2栈和队列
 
 ## 《网络工程综合专业实践》课程/
 
-- **one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）**
+- **one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）**
 
 ## 《网络服务》课程/
 
@@ -322,12 +326,12 @@ OJ/OJ2栈和队列
 - 作业七/：基于 SNMP 获取/监控服务端指标并使用单链表存储（PHP）
 
 - **作业三/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码（C）**
-- **作业九/：基于 SNMP 获取/监控服务端指标、存储并显示（Memcached 和 PHP）**
+- **作业九/：基于 SNMP 获取/监控服务端指标、存储并显示（Memcached、PHP）**
 
 - 作业二/：将图片进行 Base64 编解码并显示（PHP）
 - **作业五/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码改进二（C）**
 - 作业八/：操作 Memcached（C）
-- **作业六/：基于 SNMP 获取/监控服务端指标、显示并存储（MySQL 和 PHP）**
+- **作业六/：基于 SNMP 获取/监控服务端指标、显示并存储（MySQL、PHP）**
 - 作业十/：学习并修改 基于 SNMP TLV 编解码的获取/监控服务端指标程序（C）
 - **作业四/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码改进一（C）**
 
@@ -335,7 +339,7 @@ OJ/OJ2栈和队列
 
 - **实验一/：基于 SNMP 库轮询异步获取/监控服务端指标、在内外存存储并定时刷新页面显示（Memcached、MySQL、PHP、C、ECharts）**
 
-- 实验十/：网络拓扑结构图绘制（vis.js、JavaScript 和 HTML）
+- 实验十/：网络拓扑结构图绘制（vis.js、JavaScript、HTML）
 
 ## 《计算机网络安全》课程/
 
@@ -419,6 +423,7 @@ demand_one.sql
 2022
 
 - 《网络管理》
+- 《校级第八届中国国际“互联网+”大学生创新创业大赛》项目
 - 《计算机网络安全》
 - 《网络工程综合专业实践》
 
@@ -443,7 +448,7 @@ demand_one.sql
 
   《数据库系统》课程的的课程设计（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
 
-  《网络工程综合专业实践》课程（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
+  《网络工程综合专业实践》课程（使用 Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
 
 - 大部分非个人完成的代码：
 
@@ -457,9 +462,11 @@ demand_one.sql
 
   《网络管理》课程实验一的参考代码
 
+  《校级第八届中国国际“互联网+”大学生创新创业大赛》项目的代码
+
 - 与编程相对无关的内容：
 
-  《计算机网络》课程的实验（使用 Wireshark 和 GNS3）
+  《计算机网络》课程的实验（使用 Wireshark、GNS3）
 
   《数字通信》课程的实验（使用 MATLAB）
 
@@ -467,11 +474,11 @@ demand_one.sql
 
   《传输网络》课程的大部分实验
 
-  《交换与路由》课程的作业和实验（使用 Wireshark、Cisco Packet Tracer 和 GNS3）
+  《交换与路由》课程的作业和实验（使用 Wireshark、Cisco Packet Tracer、GNS3）
 
-  《无线网络》课程（使用 MATLAB 和 NS2）
+  《无线网络》课程（使用 MATLAB、NS2）
 
-  《计算机网络安全》课程的部分实验（使用 OpenSSL 和 Wireshark）
+  《计算机网络安全》课程的部分实验（使用 OpenSSL、Wireshark）
 
 - 相对繁杂的内容：
 
@@ -479,7 +486,7 @@ demand_one.sql
 
   《数据库系统》课程的实验和部分基础实践（SQL Server 相关）
 
-  《Web 系统与设计模式》课程的部分作业和大部分实验（使用 Zend Framework 和 PHP）
+  《Web 系统与设计模式》课程的部分作业和大部分实验（使用 Zend Framework、PHP）
 
   《网络管理》课程的部分作业和实验（Linux 运维相关）
 

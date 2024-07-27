@@ -1,1 +1,1 @@
-野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML 和 Node.js）
+野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
