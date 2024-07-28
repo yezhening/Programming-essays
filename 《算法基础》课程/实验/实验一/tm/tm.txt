@@ -1,0 +1,38 @@
+Q: q0, qR1, qL1, qR2a, qR2b, qR2c, qL2, qa, qr;
+Sigma: B, a, b, c, x, y, z;
+q0: q0;
+Accept: qa;
+Reject: qr;
+Delta: (q0,B)->(qR1,B,R),
+(qR1,a)->(qR1,a,R),
+(qR1,c)->(qR1,c,R),
+(qR1,b)->(qR1,b,R),
+(qR1,B)->(qL1,B,L),
+(qL1,b)->(qR2b,y,R),
+(qR2b,B)->(qL2,b,L),
+(qL2,y)->(qL1,y,L),
+(qL1,a)->(qR2a,x,R),
+(qR2a,y)->(qR2a,y,R),
+(qR2a,b)->(qR2a,b,R),
+(qR2a,B)->(qL2,a,L),
+(qL2,b)->(qL2,b,L),
+(qL1,x)->(qL1,x,L),
+(qR2b,x)->(qR2b,x,R),
+(qR2b,y)->(qR2b,y,R),
+(qR2b,b)->(qR2b,b,R),
+(qR2b,a)->(qR2b,a,R),
+(qL2,a)->(qL2,a,L),
+(qL1,y)->(qL1,y,L),
+(qL1,c)->(qR2c,z,R),
+(qR2c,y)->(qR2c,y,R),
+(qR2c,x)->(qR2c,x,R),
+(qR2c,b)->(qR2c,b,R),
+(qR2c,a)->(qR2c,a,R),
+(qR2c,B)->(qL2,c,L),
+(qL1,z)->(qL1,z,L),
+(qR2a,z)->(qR2a,z,R),
+(qR2a,x)->(qR2a,x,R),
+(qR2a,a)->(qR2a,a,R),
+(qR2a,c)->(qR2a,c,R),
+(qL2,c)->(qL2,c,L),
+(qL1,B)->(qa,B,-);
