@@ -1,0 +1,423 @@
+// strcpy(leftValue, part2);
+    // strcpy(rightValue, part3);
+
+    // 存储可能int、string两种类型的左、右值
+    int intLeftOperand = 0; //左值
+    char stringLeftOperand[10] = {0};
+    int intRightOperand = 0; //右值
+    char stringRightOperand[10] = {0};
+
+    int operationType = -1; //运算类型 int为0，string为1
+
+
+//判断使用的是字符数字、字符/字符串或变量名
+    if (isdigit(leftValue[0])) //左值是字符数字
+    {
+        intLeftOperand = atoi(leftValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (leftValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(leftValue) - 1; assignI++) //取字符/字符串 去首尾两个引号
+        {
+            stringLeftOperand[assignI - 1] = leftValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, leftValue); //记录变量名
+
+        //存储从变量名所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    intLeftOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(stringLeftOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    if (isdigit(rightValue[0])) //右值是字符数字
+    {
+        intRightOperand = atoi(rightValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (rightValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(rightValue) - 1; assignI++) //取字符/字符串 去首尾两个引号
+        {
+            stringRightOperand[assignI - 1] = rightValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, rightValue); //记录变量名
+
+        //所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    intRightOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(stringRightOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    // 根据操作类型进行相应判断操作
+    int intOperationResult = 0;           //int类型操作结果
+    char stringOperationResult[10] = {0}; //string类型操作结果
+
+    if (operationType == 0) //int类型
+    {
+        if (operator== '+') //取判断符判断
+        {
+            intOperationResult = intLeftOperand + intRightOperand;
+        }
+        else if (operator== '-')
+        {
+            intOperationResult = intLeftOperand - intRightOperand;
+        }
+        else if (operator== '*')
+        {
+            intOperationResult = intLeftOperand * intRightOperand;
+        }
+        else // '/'除号
+        {
+            intOperationResult = intLeftOperand / intRightOperand;
+        }
+
+        printf("结果：%d\n", intOperationResult);
+
+        // 将int型数字变量转换为字符数组存取
+        char result[4] = {0};
+        itoa(intOperationResult, result, 10); //第三个参数是转移数字时所用的基数,十进制
+
+        //存储
+        // 查符号表
+        for (int stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量声明
+            if (strcmp(part1, "") == 0) //无左赋值变量 使用栈区临时变量
+            {
+                // 符号表项记录
+                strcpy(st[stNum].varName, "temp");
+                st[stNum].varAddress = stackAreaPointer;
+                strcpy(st[stNum].varType, "int");
+
+                // 栈区地址指针增加
+                stackAreaPointer = stackAreaPointer + intByte; //一个十六进制地址代表一个字节 最多分配四个字节，四个字符
+
+                // 后取地址赋值
+                for (int assignI = 0; assignI < intByte; assignI++)
+                {
+                    st[stNum].varAddress[assignI] = result[assignI]; //一字节一字符存内存，最多四字节  即字符数组循环赋值
+                }
+
+                // 记录栈区表项
+                sa[saNum].varAddress = st[stNum].varAddress;
+                strcpy(sa[saNum].varValue, result);
+                saNum++; // 栈区表项递增
+
+                stNum++; //符号表项序号递增
+
+                break; //操作完跳出查符号表循环
+            }
+
+            if (strcmp(st[stI].varName, part1) == 0) //有左赋值变量 判断是否已声明
+            {
+                // 后取地址赋值
+                for (int assignI = 0; assignI < intByte; assignI++)
+                {
+                    st[stI].varAddress[assignI] = result[assignI]; //一字节一字符存内存，最多四字节  即字符数组循环赋值
+                }
+
+                // 查全局区项
+                for (int gaI = 0; gaI < gaNum; gaI++)
+                {
+                    if (strcmp(ga[gaI].varAddress, st[stI].varAddress) == 0) //查到
+                    {
+                        ga[gaI].varAddress = st[stI].varAddress;
+                        strcpy(ga[gaI].varValue, result);
+
+                        break; //查到跳出查全局区循环
+                    }
+                }
+
+                break; //查到跳出查符号表循环
+            }
+
+            //未查到报错
+            if (stI + 1 == stNum)
+            {
+                printf("变量未定义，不允许赋值操作\n");
+            }
+        }
+    }
+    else //string类型
+    {
+        // 取最大字符串长度
+        int leftOperandLength = strlen(stringLeftOperand); //操作数长度
+        int rightOperandLength = strlen(stringRightOperand);
+        int operandLength = 0;                       //判断长度，取大循环
+        if (leftOperandLength >= rightOperandLength) //第一个字符串长
+        {
+            operandLength = leftOperandLength;
+        }
+        else //第二个字符串长
+        {
+            operandLength = rightOperandLength;
+        }
+
+        if (operator== '+') //拼接
+        {
+            strcat(stringOperationResult, stringLeftOperand);
+            strcat(stringOperationResult, stringRightOperand);
+        }
+        else if (operator== '|') //按位取大
+        {
+            for (int compareI = 0; compareI < operandLength; compareI++)
+            {
+                if (stringLeftOperand[compareI] >= stringRightOperand[compareI]) //取第一个操作数字符
+                {
+                    stringOperationResult[compareI] = stringLeftOperand[compareI];
+                }
+                else //取第二个操作数字符
+                {
+                    stringOperationResult[compareI] = stringRightOperand[compareI];
+                }
+            }
+        }
+        else //按位取小
+        {
+            for (int compareI = 0; compareI < operandLength; compareI++)
+            {
+                if (stringLeftOperand[compareI] <= stringRightOperand[compareI]) //取第一个操作数字符
+                {
+                    stringOperationResult[compareI] = stringLeftOperand[compareI];
+                }
+                else //取第二个操作数字符
+                {
+                    stringOperationResult[compareI] = stringRightOperand[compareI];
+                }
+            }
+        }
+
+        printf("结果：%s\n", stringOperationResult);
+
+        //存储
+        // 查符号表
+        for (int stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量声明
+            if (strcmp(part1, "") == 0) //无左赋值变量 使用栈区临时变量
+            {
+                // 符号表项记录
+                strcpy(st[stNum].varName, "temp");
+                st[stNum].varAddress = stackAreaPointer;
+                strcpy(st[stNum].varType, "string");
+
+                // 栈区地址指针增加
+                stackAreaPointer = stackAreaPointer + stringByte; //一个十六进制地址代表一个字节 最多分配十个字节，十个字符
+
+                // 后取地址赋值
+                for (int assignI = 0; assignI < stringByte; assignI++)
+                {
+                    st[stNum].varAddress[assignI] = stringOperationResult[assignI]; //一字节一字符存内存，最多十字节  即字符数组循环赋值
+                }
+
+                // 记录栈区表项
+                sa[saNum].varAddress = st[stNum].varAddress;
+                strcpy(sa[saNum].varValue, stringOperationResult);
+                saNum++; // 栈区表项递增
+
+                stNum++; //符号表项序号递增
+
+                break; //操作完跳出查符号表循环
+            }
+
+            if (strcmp(st[stI].varName, part1) == 0) //有左赋值变量 判断是否已声明
+            {
+                // 后取地址赋值
+                for (int assignI = 0; assignI < stringByte; assignI++)
+                {
+                    st[stI].varAddress[assignI] = stringOperationResult[assignI]; //一字节一字符存内存，最多十字节  即字符数组循环赋值
+                }
+
+                // 查全局区项
+                for (int gaI = 0; gaI < gaNum; gaI++)
+                {
+                    if (strcmp(ga[gaI].varAddress, st[stI].varAddress) == 0) //查到
+                    {
+                        ga[gaI].varAddress = st[stI].varAddress;
+                        strcpy(ga[gaI].varValue, stringOperationResult);
+
+                        break; //查到跳出查全局区循环
+                    }
+                }
+
+                break; //查到跳出查符号表循环
+            }
+
+            //未查到报错
+            if (stI + 1 == stNum)
+            {
+                printf("变量未定义，不允许赋值操作\n");
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+ char varStringValue[10] = {0}; //所取字符串值
+    int varStringLength = 0;       //所取字符串长度
+
+    // 查符号表
+    for (int stI = 0; stI < stNum; stI++)
+    {
+        // 先查变量名
+        if (strcmp(st[stI].varName, varName) == 0) //查到
+        {
+            //再判断变量类型
+            if (strcmp(st[stI].varType, "string") == 0) //string类型
+            {
+                // 后从地址取值
+                for (int readI = 0; readI < stringByte; readI++)
+                {
+                    varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                }
+
+                // 打印值
+                varStringLength = strlen(varStringValue);
+                printf("该变量字符串长度为：%d\n", varStringLength);
+            }
+            else //int类型
+            {
+                printf("变量类型为int，不适用该运算操作\n");
+            }
+
+            break; //查到跳出符号表循环
+        }
+
+        //未查到报错
+        if (stI + 1 == stNum)
+        {
+            printf("变量未定义，不允许取字符串长度操作\n");
+        }
+    }
+
+
+
+
+ char *address = NULL; //存放所取地址
+    char value[10] = {0}; //存放所取值
+
+    //查函数符号表
+    for (int fstI = 0; fstI < fstNum; fstI++)
+    {
+        if (strcmp(fst[fstI].varName, sentence) == 0) //查到
+        {
+            address = fst[fstI].varAddress; //取地址
+
+            break; //退出循环
+        }
+    }
+
+    printf("所取地址：%p\n", address);
+
+    //在栈区取值
+    for (int assignI = 0; assignI < intByte; assignI++)
+    {
+        value[assignI] = address[assignI];
+    }

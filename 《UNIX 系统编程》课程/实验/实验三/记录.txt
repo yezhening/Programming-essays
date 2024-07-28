@@ -1,0 +1,13 @@
+【C语言】模块化编程-通俗易懂
+https://blog.csdn.net/as480133937/article/details/93400979
+
+为什么 sigaction 结构出现 incomplete type is not allowed
+https://blog.csdn.net/qq_39522282/article/details/100100978
+
+Struct sigaction incomplete type(Intellisense problem) #71012
+https://github.com/Microsoft/vscode/issues/71012
+
+关于__GNU_SOURCE 这个宏
+https://www.cnblogs.com/raozhiyi/articles/9509600.html
+最后发现 sys/time.h sys/stat.h time.h 都include 一个共同的头文件 features.h
+原来这是用来让用户配置编译环境的头文件。再看一下_GUN_SOURCE这个宏，这个宏可以让用户打开所有feature.

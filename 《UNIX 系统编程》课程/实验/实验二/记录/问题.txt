@@ -1,0 +1,8 @@
+errno
+http://c.biancheng.net/ref/errno.html
+
+stdin和STDIN_FILENO的区别
+https://www.cnblogs.com/alan666/p/8311945.html
+
+Linux pid_t 类型的定义
+https://blog.csdn.net/K346K346/article/details/80212265

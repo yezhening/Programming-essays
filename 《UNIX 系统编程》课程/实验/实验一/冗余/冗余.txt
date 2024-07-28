@@ -1,0 +1,218 @@
+char argument1IntValue[4] = {0};
+    char argument1StringValue[10] = {0};
+    char argument2IntValue[4] = {0};
+    char argument2StringValue[50] = {0};
+
+    // 参数是全局变量 查符号表 取参数值
+    int stI = 0;
+    for (stI = 0; stI < stNum; stI++)
+    {
+        // 先查变量声明
+        if (strcmp(st[stI].varName, argument1) == 0) //查到
+        {
+            //再判断变量类型
+            if (strcmp(st[stI].varType, "int") == 0) //int类型
+            {
+                // 后从地址取值
+                for (int readI = 0; readI < intByte; readI++)
+                {
+                    argument1IntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                }
+
+                // 打印值
+                printf("该变量值为：%s\n", argument1IntValue); //使用字符数组显示
+            }
+            else //string类型
+            {
+                // 后从地址取值
+                for (int readI = 0; readI < stringByte; readI++)
+                {
+                    argument1StringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                }
+
+                // 打印值
+                printf("该变量值为：%s\n", argument1StringValue); //使用字符数组显示
+            }
+
+            break; //查到跳出循环
+        }
+    }
+    //未查到报错
+    if (stI == stNum)
+    {
+        printf("参数1未定义，不允许取值操作\n");
+    }
+
+    for (stI = 0; stI < stNum; stI++)
+    {
+        // 先查变量声明
+        if (strcmp(st[stI].varName, argument2) == 0) //查到
+        {
+            //再判断变量类型
+            if (strcmp(st[stI].varType, "int") == 0) //int类型
+            {
+                // 后从地址取值
+                for (int readI = 0; readI < intByte; readI++)
+                {
+                    argument2IntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                }
+
+                // 打印值
+                printf("该变量值为：%s\n", argument2IntValue); //使用字符数组显示
+            }
+            else //string类型
+            {
+                // 后从地址取值
+                for (int readI = 0; readI < stringByte; readI++)
+                {
+                    argument2StringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                }
+
+                // 打印值
+                printf("该变量值为：%s\n", argument2StringValue); //使用字符数组显示
+            }
+
+            break; //查到跳出循环
+        }
+    }
+    //未查到报错
+    if (stI == stNum)
+    {
+        printf("参数2未定义，不允许取值操作\n");
+    }
+   
+   //将参数地址压栈,后从参数地址取值将值压栈 顺序从右向左→简化操作，直接将参数值压栈
+    stackAreaAssignment = stackAreaFunctionHead; //记录在一个函数栈帧中压栈后的各个地址
+
+    //判断操作类型压哪个值
+    if (strcmp(functionType, "int") == 0) //int类型
+    {
+        //压栈
+        for (int assignI = 0; assignI < intByte; assignI++)
+        {
+            stackAreaAssignment[assignI] = argument2IntValue[assignI];
+        }
+
+        // 记录栈区表项
+        sa[saNum].varAddress = stackAreaAssignment;
+        strcpy(sa[saNum].varValue, argument2IntValue);
+        saNum++; // 栈区表项递增
+
+        stackAreaAssignment = stackAreaAssignment + intByte; //记录压栈地址
+
+        for (int assignI = 0; assignI < intByte; assignI++)
+        {
+            stackAreaAssignment[assignI] = argument1IntValue[assignI];
+        }
+
+        // 记录栈区表项
+        sa[saNum].varAddress = stackAreaAssignment;
+        strcpy(sa[saNum].varValue, argument1IntValue);
+        saNum++; // 栈区表项递增
+
+        stackAreaAssignment = stackAreaAssignment + intByte; //记录压栈地址
+    }
+    else //string类型
+    {
+        //压栈
+        for (int assignI = 0; assignI < stringByte; assignI++)
+        {
+            stackAreaAssignment[assignI] = argument2StringValue[assignI];
+        }
+
+        // 记录栈区表项
+        sa[saNum].varAddress = stackAreaAssignment;
+        strcpy(sa[saNum].varValue, argument2StringValue);
+        saNum++; // 栈区表项递增
+
+        stackAreaAssignment = stackAreaAssignment + stringByte; //记录压栈地址
+
+        for (int assignI = 0; assignI < stringByte; assignI++)
+        {
+            stackAreaAssignment[assignI] = argument1StringValue[assignI];
+        }
+
+        // 记录栈区表项
+        sa[saNum].varAddress = stackAreaAssignment;
+        strcpy(sa[saNum].varValue, argument1StringValue);
+        saNum++; // 栈区表项递增
+
+        stackAreaAssignment = stackAreaAssignment + stringByte; //记录压栈地址
+    }
+
+    //取代码段代码执行
+    for (int readI = 0; readI < codeAreaStatementNum; readI++) //取已存值的代码区
+    {
+        //转函数语句处理函数
+        functionStatementProcessing(argument1, argument2, codeAreaPointer[readI]); //传参数，执行语句
+    }
+
+
+
+define a
+变量名：a
+returnType int
+argumentType int a
+
+
+int a;   
+int b;
+a=1;
+b=2;
+def func
+reT int
+arT int a
+arT int b
+
+
+
+//函数变量声明
+void functionVarDeclaration(char type[], char name[]) //int a
+{
+    //记录函数符号表项
+    strcpy(fst[fstNum].varName, name);
+    fst[fstNum].varAddress = stackAreaPointer; //记录当前栈指针
+    strcpy(fst[fstNum].varType, type);
+
+    if (strcmp(fst[fstNum].varType, "int") == 0)
+    {
+        stackAreaPointer = stackAreaPointer + intByte; //为其地址预留四字节空间
+    }
+    else //string类型
+    {
+        stackAreaPointer = stackAreaPointer + stringByte; //为其地址预留十字节空间
+    }
+
+    fstNum++;
+}
+
+//函数变量赋值
+void functionVarAssignment(char name[], char value[])
+{
+    //查函数符号表
+    for (int fstI = 0; fstI < fstNum; fstI++)
+    {
+        //查声明
+        if (strcmp(fst[fstI].varName, name) == 0) //查到
+        {
+            //查类型
+            if (strcmp(fst[fstI].varType, "int") == 0) //int类型
+            {
+                //创建当前被调用函数的栈帧 存放局部变量
+                for (int assignI = 0; assignI < intByte; assignI++)
+                {
+                    fst[fstI].varAddress[assignI] = value[assignI];
+                }
+            }
+            else //string类型
+            {
+                //创建当前被调用函数的栈帧 存放局部变量
+                for (int assignI = 0; assignI < stringByte; assignI++)
+                {
+                    fst[fstI].varAddress[assignI] = value[assignI];
+                }
+            }
+        }
+    }
+}
+

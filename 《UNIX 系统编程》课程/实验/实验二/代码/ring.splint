@@ -1,0 +1,7 @@
+ring.c: (in function main)
+ring.c:60:14: Assignment of __pid_t to pid_t: childpid = fork()
+  Types are incompatible. (Use -type to inhibit warning)
+ring.c:89:13: Test expression for if not boolean, type pid_t: childpid
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+

@@ -1,0 +1,42 @@
+变量定义函数：
+// 全局区指针递增
+        globalAreaPointer = globalAreaPointer + 5; //一个十六进制地址代表一个字节 最多分配五个字节，五个字符
+ // 全局区指针递增
+        globalAreaPointer = globalAreaPointer + 10; //一个十六进制地址代表一个字节  最多分配十个字节，十个字符
+
+bug：
+赋值类型不匹配
+函数计算有小问题
+定义越界
+
+问题：
+变量定义时分配一定内存空间吗
+
+难题：
+代码区二维指针的使用
+
+注意点：
+字符数组开得小了没有结束符
+
+思路：
+默认全局变量
+def func无分号
+关键字 def reT arT enddef;
+变量取值取址接收五个字符
+int类型接收四个字符
+函数操作传入参数 未写
+参数同名 未写
+变量计算每部分最多接收十个字符
+默认给temp变量都分配十字节 因为有覆盖因素
+temp覆盖：考虑到其他元素压栈，不清理栈空间，默认往下下
+list st fst mem all;
+judgementIntLeftValue = atoi(judgementLeftValue); //将字符数字转换为数字 可以传指针
+ if (strcmp(judgementLeftValue, judgementRightValue) >= 0) //真实/底层判断 可以比较
+if("zzz"<="a") int d else b=123 endif;
+ char statement[10][10] = {0}; //执行语句 存储执行语句，最多十条
+ strcpy(statement[statementI], sentence1); //二维字符数组的使用
+while不支持函数使用 嵌套有点问题，judgement数组会变
+函数返回一个字符数组值
+函数直接调用，返回值直接输出
+函数无嵌套，只有一个函数
+函数变量名清除有问题

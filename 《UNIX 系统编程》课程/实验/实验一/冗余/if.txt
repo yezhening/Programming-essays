@@ -1,0 +1,727 @@
+ if (sentence[sentenceI] == ')') //读第一部分结束
+        {
+            partFlag = 2;
+
+            sentenceI = sentenceI + 2; //跳过右括号，空格
+
+            readI = sentenceI; //记录各部分存取下标变量 因为每一部分数组从0开始存取
+        }
+
+        if (partFlag == 2) //读第二部分 操作语句1
+        {
+            statement1[sentenceI - readI] = sentence[sentenceI];
+        }
+
+        if (sentence[sentenceI + 1] == ' ' && sentence[sentenceI + 2] == 'e' && sentence[sentenceI + 3] == 'l' && sentence[sentenceI + 4] == 's' && sentence[sentenceI + 5] == 'e' && sentence[sentenceI + 6] == ' ') //读第二部分结束
+        {
+            partFlag = 3;
+
+            sentenceI = sentenceI + 7; //跳过空格，else，空格
+
+            readI = sentenceI; //记录各部分存取下标变量 因为每一部分数组从0开始存取
+        }
+
+        if (partFlag == 3) //读第三部分 操作语句2
+        {
+            statement2[sentenceI - readI] = sentence[sentenceI];
+        }
+
+        if (sentence[sentenceI + 1] == ' ' && sentence[sentenceI + 2] == 'e' && sentence[sentenceI + 3] == 'n' && sentence[sentenceI + 4] == 'd' && sentence[sentenceI + 5] == 'i' && sentence[sentenceI + 6] == 'f' && sentence[sentenceI + 7] == ';') //读第三部分结束
+        {
+            partFlag = 4; //读取结束
+        }
+    }
+
+    printf("%s\n", judgement);
+    printf("%s\n", statement1);
+    printf("%s\n", statement2);
+
+    // 判断判断语句 a==b
+    char judgementLeftValue[10] = {0};  //左值
+    char judgementRightValue[10] = {0}; //右值
+    char operator[3] = {0};             //判断符 使用两个字符的数组，在判断符有两个时，未自动赋结束符，会输出operator后的地址数值，如输出judgementRighttValue地址数值
+
+    char judgementFlag = 0; //判断符标志
+
+    int judgementRightValueI = 0; //记录右值数组下标从0开始
+
+    int judgementLength = strlen(judgement); //判断语句长度
+
+    // 扫描判断语句 //取操作数、操作符
+    for (int judgementI = 0; judgementI < judgementLength; judgementI++)
+    {
+        //判断第一个判断符
+        if (judgement[judgementI] == '>' || judgement[judgementI] == '=' || judgement[judgementI] == '<' || judgement[judgementI] == '!') //读到判断符
+        {
+            judgementFlag = 1; //标志置位
+
+            operator[0] = judgement[judgementI]; //记录第一个判断符
+
+            judgementI++; //跳过第一个判断符
+
+            //判断第二个判断符
+            if (judgement[judgementI] == '=')
+            {
+                operator[1] = judgement[judgementI]; //记录第二个判断符
+
+                judgementI++; //跳过第二个判断符
+            }
+        }
+
+        if (judgementFlag == 0) //取左值
+        {
+            judgementLeftValue[judgementI] = judgement[judgementI];
+        }
+        else //取右值
+        {
+            judgementRightValue[judgementRightValueI] = judgement[judgementI]; //数组从0开始
+            judgementRightValueI++;
+        }
+    }
+
+    printf("%s", judgementLeftValue);
+    printf(" %s ", operator);
+    printf("%s\n", judgementRightValue);
+
+    int judgementIntLeftOperand = 0; //左值
+    char judgementStringLeftOperand[10] = {0};
+    int judgementIntRightOperand = 0; //右值
+    char judgementStringRightOperand[10] = {0};
+
+    int operationType = -1; //运算类型 int为0，string为1
+
+    //判断判断使用的是字符数字、字符/字符串或变量名
+    if (isdigit(judgementLeftValue[0])) //左值是字符数字
+    {
+        judgementIntLeftOperand = atoi(judgementLeftValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (judgementLeftValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(judgementLeftValue) - 1; assignI++) //取字符/字符串 首尾两个引号
+        {
+            judgementStringLeftOperand[assignI - 1] = judgementLeftValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, judgementLeftValue); //记录变量名
+
+        //所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    judgementIntLeftOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(judgementStringLeftOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    if (isdigit(judgementRightValue[0])) //右值是字符数字
+    {
+        judgementIntRightOperand = atoi(judgementRightValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (judgementRightValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(judgementRightValue) - 1; assignI++) //取字符/字符串 首尾两个引号
+        {
+            judgementStringRightOperand[assignI - 1] = judgementRightValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, judgementRightValue); //记录变量名
+
+        //所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    judgementIntRightOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(judgementStringRightOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    // 根据操作类型进行相应判断操作
+    int operationResult = -1; //操作结果 正确为0错误为1
+
+    if (operationType == 0) //int类型
+    {
+        if (strcmp(operator, ">=") == 0) //取判断符判断
+        {
+            if (judgementIntLeftOperand >= judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "==") == 0) //取判断符判断
+        {
+            if (judgementIntLeftOperand == judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "<=") == 0) //取判断符判断
+        {
+            if (judgementIntLeftOperand <= judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "!=") == 0) //取判断符判断
+        {
+            if (judgementIntLeftOperand != judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, ">") == 0) //取判断符判断
+        {
+            if (judgementIntLeftOperand > judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else //<小于符
+        {
+            if (judgementIntLeftOperand < judgementIntRightOperand) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+    }
+    else //string类型
+    {
+        if (strcmp(operator, ">=") == 0) //取判断符判断
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) >= 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "==") == 0) //取判断符判断
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) == 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "<=") == 0) //取判断符判断
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) <= 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, "!=") == 0) //取判断符判断
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) != 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else if (strcmp(operator, ">") == 0) //取判断符判断
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) > 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+        else //<小于符
+        {
+            if (strcmp(judgementStringLeftOperand, judgementStringRightOperand) < 0) //真实/底层判断
+            {
+                operationResult = 0;
+            }
+            else
+            {
+                operationResult = 1;
+            }
+        }
+    }
+
+    printf("%d\n", operationResult);
+
+    //执行操作语句
+    if (operationResult == 0) //执行操作语句1
+    {
+        statementProcessing(statement1); //转语句处理函数
+    }
+    else //执行操作语句2
+    {
+        statementProcessing(statement2); //转语句处理函数
+    }
+
+
+
+
+
+
+
+
+
+
+ // 判断语句 a==b
+    char leftValue[10] = {0};  //左值
+    char rightValue[10] = {0}; //右值
+    char operator[3] = {0};    //判断符 使用两个字符的数组，在判断符有两个时，未自动赋结束符，会输出operator后的地址数值，如输出judgementRighttValue地址数值
+
+    char judgementFlag = 0; //判断符标志
+
+    int rightValueI = 0; //记录右值数组下标从0开始
+
+    int judgementLength = strlen(judgement); //判断语句长度
+
+    // 扫描语句 取操作数、操作符
+    for (int judgementI = 0; judgementI < judgementLength; judgementI++)
+    {
+        //判断第一个判断符
+        if (judgement[judgementI] == '>' || judgement[judgementI] == '=' || judgement[judgementI] == '<' || judgement[judgementI] == '!') //读到判断符
+        {
+            judgementFlag = 1; //标志置位
+
+            operator[0] = judgement[judgementI]; //记录第一个判断符
+
+            judgementI++; //跳过第一个判断符
+
+            //判断第二个判断符
+            if (judgement[judgementI] == '=')
+            {
+                operator[1] = judgement[judgementI]; //记录第二个判断符
+
+                judgementI++; //跳过第二个判断符
+            }
+        }
+
+        if (judgementFlag == 0) //取左值
+        {
+            leftValue[judgementI] = judgement[judgementI];
+        }
+        else //取右值
+        {
+            rightValue[rightValueI] = judgement[judgementI]; //数组从0开始
+            rightValueI++;
+        }
+    }
+
+    printf("%s", leftValue);
+    printf(" %s ", operator);
+    printf("%s\n", rightValue);
+
+    //存储可能int、string两种类型的左、右值
+    int intLeftOperand = 0; //左值
+    char stringLeftOperand[10] = {0};
+    int intRightOperand = 0; //右值
+    char stringRightOperand[10] = {0};
+
+    int operationType = -1; //运算类型 int为0，string为1
+
+    //判断使用的是字符数字、字符/字符串或变量名
+    if (isdigit(leftValue[0])) //左值是字符数字
+    {
+        intLeftOperand = atoi(leftValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (leftValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(leftValue) - 1; assignI++) //取字符/字符串 去首尾两个引号
+        {
+            stringLeftOperand[assignI - 1] = leftValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, leftValue); //记录变量名
+
+        //存储从变量名所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    intLeftOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(stringLeftOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    if (isdigit(rightValue[0])) //右值是字符数字
+    {
+        intRightOperand = atoi(rightValue); //将字符数字转换为数字
+
+        operationType = 0; //int类型运算
+    }
+    else if (rightValue[0] == '"') //是字符/字符串
+    {
+        for (int assignI = 1; assignI < strlen(rightValue) - 1; assignI++) //取字符/字符串 去首尾两个引号
+        {
+            stringRightOperand[assignI - 1] = rightValue[assignI]; //数组从0开始
+        }
+
+        operationType = 1; //string类型运算
+    }
+    else //是变量名
+    {
+        char varName[10] = {0};
+        strcpy(varName, rightValue); //记录变量名
+
+        //所取值
+        char varIntValue[4] = {0}; //静态数组只能给具体数字
+        char varStringValue[10] = {0};
+
+        // 查符号表
+        int stI = 0;
+        for (stI = 0; stI < stNum; stI++)
+        {
+            // 先查变量名
+            if (strcmp(st[stI].varName, varName) == 0) //查到
+            {
+                //再判断变量类型
+                if (strcmp(st[stI].varType, "int") == 0) //int类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < intByte; readI++)
+                    {
+                        varIntValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多四字节  即字符数组循环取值
+                    }
+
+                    intRightOperand = atoi(varIntValue); //记录值 将字符数字转换为数字
+
+                    operationType = 0; //int类型运算
+                }
+                else //string类型
+                {
+                    // 后从地址取值
+                    for (int readI = 0; readI < stringByte; readI++)
+                    {
+                        varStringValue[readI] = st[stI].varAddress[readI]; //一字节一字符读内存，最多十字节  即字符数组循环取值
+                    }
+
+                    strcpy(stringRightOperand, varStringValue); //记录值
+
+                    operationType = 1; //string类型运算
+                }
+
+                break; //查到跳出循环
+            }
+        }
+
+        //未查到报错
+        if (stI == stNum)
+        {
+            printf("变量未定义，不允许取值操作\n");
+        }
+    }
+
+    // 根据操作类型进行相应判断操作
+    int operationResult = -1; //操作结果 错误为0正确为1
+
+    if (operationType == 0) //int类型
+    {
+        if (strcmp(operator, ">=") == 0) //取判断符判断
+        {
+            if (intLeftOperand >= intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "==") == 0) //取判断符判断
+        {
+            if (intLeftOperand == intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "<=") == 0) //取判断符判断
+        {
+            if (intLeftOperand <= intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "!=") == 0) //取判断符判断
+        {
+            if (intLeftOperand != intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, ">") == 0) //取判断符判断
+        {
+            if (intLeftOperand > intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else //<小于符
+        {
+            if (intLeftOperand < intRightOperand) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+    }
+    else //string类型
+    {
+        if (strcmp(operator, ">=") == 0) //取判断符判断
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) >= 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "==") == 0) //取判断符判断
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) == 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "<=") == 0) //取判断符判断
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) <= 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, "!=") == 0) //取判断符判断
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) != 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else if (strcmp(operator, ">") == 0) //取判断符判断
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) > 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+        else //<小于符
+        {
+            if (strcmp(stringLeftOperand, stringRightOperand) < 0) //真实/底层判断
+            {
+                operationResult = 1;
+            }
+            else
+            {
+                operationResult = 0;
+            }
+        }
+    }
+
+    return operationResult; //返回判断结果
