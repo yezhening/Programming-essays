@@ -1,0 +1,4 @@
+作业完成流程：
+1.自行翻译并阅读RFC中的IRC文档
+2.查阅并理解io_uring的实现原理
+3.使用io_uring的封装函数库liburing自行编程实现IRC的基本内容
