@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+
+    <!-- 使用bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 栅格系统 -->
+    <!-- 容器 -->
+    <div class="container-fiuled">
+        <!-- 巨幕 -->
+        <div class="jumbotron text-center">
+            <h1 class="display-4">用户登录</h1>
+            <p class="lead">请输入账号和密码进行登录</p>
+            <hr class="my-4">
+            <!-- 内容 -->
+            <div>
+                <!-- 表单 -->
+                <form method="post" action="{% url 'rbac:login' %}">
+                    {% csrf_token %}
+                    <p><label>账号:</label> {{ form.account }}</p>
+                    <p><label>密码:</label> {{ form.password }}</p>
+                    <p><label>角色:</label> {{ form.role.0 }} {{ form.role.1 }}</p>
+                    <input class="btn btn-primary" type="submit" value="登录">
+                    <input class="btn btn-info" type="reset" value="重置">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

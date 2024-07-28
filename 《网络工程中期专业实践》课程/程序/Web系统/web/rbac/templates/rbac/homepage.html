@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+
+    <!-- 使用bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <a class="navbar-brand" href="{% url 'rbac:homepage' %}">主页</a>
+        <!-- 链接 -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'rbac:homepage' %}">主页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'rbac:logout' %}">退出</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 第二个空导航栏，占位置 -->
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <a class="navbar-brand" href="#">成果认定</a>
+    </nav>
+
+    <div class="row">
+        <div class="col-2 text-center">
+            <br>
+            <h4>{{ consumer_name }}，你好</h4>
+            <h5>角色: {{ role_name }}</h5>
+            <br>
+
+            <!-- 侧边栏 -->
+            <ul class="nav nav-pills nav-justified flex-column">
+                <li class="nav-item"><a class="nav-link active" href="#">业务功能</a></li>
+                {% if role_name == '管理员' %}         
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:specify_host_type' %}">指定域名类型</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:request_list' %}">查看请求报文特征</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:response_list' %}">查看响应报文特征</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:request_sourceip_number' %}">统计源地址发送请求包数</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:request_type' %}">统计请求报文访问类型</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:destinationip_number' %}">统计目的地址接收响应包数</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:response_content_type' %}">统计响应报文的载荷类型</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:show_host_type' %}">查看域名类型</a></li>
+                {% if role_name == '管理员' %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:request_frame_size' %}">统计请求报文帧大小</a></li>
+                {% endif %}
+                {% if role_name == '管理员' %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:response_frame_size' %}">统计请求报文帧大小</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'packets:analysis_webpage' %}">分析网页内容性质</a></li>
+                {% if role_name == '管理员' %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'rbac:account_management' %}">账号管理</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-10">
+            <!-- 巨幕 -->
+            <div class="jumbotron text-center">
+                <h1 class="display-4">欢迎来到超文本传输协议分析系统</h1>
+                <p class="lead">这里，可以完美地满足您的所有业务需求</p>
+                <hr class="my-4">
+                <div class="text-right">
+                    <input class="btn btn-info" type="reset" value="了解更多">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

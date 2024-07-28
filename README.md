@@ -40,6 +40,7 @@
 - 《UNIX 系统编程》课程/实验/实验二/：进程令牌环的通信（分布式斐波那契数列计算和信息检索）（C）
 - 《UNIX 系统编程》课程/实验/实验四/：基于网络编程 C/S 模型、守护进程和多线程的套接字通信（C）
 - 
+- 《网络工程中期专业实践》课程/：基于 Libpcap 的 WLAN 帧 HTTP 载荷分析系统的设计与实现（Django、MySQL、C、Echats、Bootstrap、JavaScript、CSS、HTML）
 - 《数据库系统》课程/基础实践/基础实践二/Ex3/：将关系型数据库向面向对象程序转换并使用 DAO 技术构建朴素数据库持久层（Python）
 - 《数据库系统》课程/课程设计/过程.png（Django、MySQL、Bootstrap、JavaScript、CSS、HTML）
 - 《传输网络》课程/实验一/a.c：基带信道加解扰编程
@@ -51,14 +52,14 @@
 - 《网络管理》课程/作业/作业四/：网络编程 C/S 模型获取服务端信息并模拟 TLV 编解码改进一（C）
 - 《网络管理》课程/实验/实验一/：基于 SNMP 库轮询异步获取/监控服务端指标、在内外存存储并定时刷新页面显示（Memcached、MySQL、PHP、C、ECharts）
 - 
-- 《校级第八届中国国际“互联网+”大学生创新创业大赛》项目/*.png：《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（Bootstrap、jQuery、JavaScript、CSS、HTML）
+- 《校级第八届中国国际“互联网+”大学生创新创业大赛》项目/*.png：《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（jQuery、Bootstrap、JavaScript、CSS、HTML）
 - 
 - 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密（C++）
 - 《计算机网络安全》课程/实验实验二/：DES 密码算法的加解密和支持部分工作模式（C++）
 - 《计算机网络安全》课程/实验实验四/：DH 密码算法的加解密（C++）
 - 
-- 《网络工程综合专业实践》课程/one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
+- 《网络工程综合专业实践》课程/*.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
 
 # 三、主要内容
 
@@ -335,9 +336,13 @@ OJ/OJ2栈和队列
 
 - **销售业绩管理系统.c**
 
+## 《网络工程中期专业实践》课程/
+
+- **/：基于 Libpcap 的 WLAN 帧 HTTP 载荷分析系统的设计与实现（Django、MySQL、C、Echats、Bootstrap、JavaScript、CSS、HTML）**
+
 ## 《网络工程综合专业实践》课程/
 
-- **one.png、two.png 和 three.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）**
+- **/*.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）**
 
 ## 《网络服务》课程/
 
@@ -450,6 +455,7 @@ demand_one.sql
 - 《Java 程序设计》
 - 《网络服务》
 - 《UNIX 系统编程》
+- 《网络工程中期专业实践》课程
 - 《数据库系统》
 - 《传输网络》
 - 《Web 系统与设计模式》
@@ -491,6 +497,8 @@ demand_one.sql
   《数据结构 A》课程的课程设计的数据集
 
   《Java 程序设计》课程的课程设计的数据集
+
+  《网络工程中期专业实践》课程的数据集
 
   《网络管理》课程实验一的参考代码
 

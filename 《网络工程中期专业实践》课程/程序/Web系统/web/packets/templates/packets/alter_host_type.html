@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改</title>
+
+    <!-- 使用bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <a class="navbar-brand" href="{% url 'rbac:homepage' %}">主页</a>
+        <!-- 链接 -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'rbac:homepage' %}">主页</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 第二个空导航栏，占位置 -->
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <a class="navbar-brand" href="#">主页</a>
+    </nav>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-9">
+            <p></p>
+            <!-- 路径，提交后回原页面 -->
+            <form action="" method="post">
+                <!-- 下划线不是中线 -->
+                {% csrf_token %}
+                {{ host_type_form.as_p }}
+                <input class="btn btn-primary" type="submit" value="提交">
+                <input class="btn btn-info" type="reset" value="重置">
+                <a class="btn btn-success" href="{% url 'packets:specify_host_type' %}" role="button">返回</a>
+            </form>
+        </div>
+</body>
+
+</html>

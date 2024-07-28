@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html> -->
+<!-- 不能用 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示域名信息</title>
+
+    <!-- 使用bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- JS -->
+    <!-- 使用Echarts -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+
+    <!-- CSS -->
+    <!-- 作图样式 -->
+    <style type="text/css">
+        /* 图大小 */
+        #main {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <a class="navbar-brand" href="{% url 'rbac:homepage' %}">主页</a>
+        <!-- 链接 -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'rbac:homepage' %}">主页</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 第二个空导航栏，占位置 -->
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <a class="navbar-brand" href="#">成果认定</a>
+    </nav>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main"></div>
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var chart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            //提示框组件,鼠标移动上去显示的提示内容
+            tooltip: {
+                trigger: 'item', //鼠标悬停显示
+                formatter: "{a} <br/>{b}: {c} ({d}%)" //模板变量 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比
+            },
+            //图例
+            legend: {
+                //图例左边垂直排列
+                orient: 'vertical',
+                x: 'left',
+                //data中的名字与series-data中的列名对应，方可点击操控
+                // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+                data: {{ li2 | safe }} //必须有空格、safe safe将html生成安全的文本，将整型转为字符串
+                },
+        series: [
+            {
+                name: '访问类型', //显示名称
+                type: 'pie', //饼状图
+                // radius: ['50%', '70%'], //圆环显示方式
+                // avoidLabelOverlap: false, //开启防止标签重叠
+                roseType: 'angle', // 南丁格尔图
+                //阴影
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                //标签
+                label: {
+                    normal: {
+                        // show: true, //默认显示
+                        position: 'inside', //标签显示
+                        formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+
+                        textStyle: {    //文本样式
+                            align: 'center',
+                            baseline: 'middle',
+                            fontFamily: '微软雅黑',
+                            fontSize: 15,
+                            fontWeight: 'bolder'
+                        }
+                    },
+                },
+                // data: [
+                //     { value: 335, name: '直接访问' },
+                //     { value: 310, name: '邮件营销' },
+                //     { value: 234, name: '联盟广告' },
+                //     { value: 135, name: '视频广告' },
+                //     { value: 1548, name: '搜索引擎' }
+                // ]
+                data: {{ li | safe }}
+                    }
+        ]
+            };
+
+        // 使用刚指定的配置项和数据显示图表
+        chart.setOption(option);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+使用tcpdump捕获无线网数据包
+修改C程序，可捕获以太网数据包：snifferRequest、snifferResponse
+修改C程序，处理无线网数据包：handleRequest、handleResponse
+Whois查询：Whois4
+
+handleRequest、handleResponse程序是读取路径下已捕获的数据包
+
+程序有三种路径：
+锁文件路径：如/var/run/snifferRequest.pid
+日志文件路径：/var/log/messages
+数据包文件保存路径：如/home/ricardo/桌面/Capture/request.pcap

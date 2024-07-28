@@ -1,1 +1,1 @@
-《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（Bootstrap、jQuery、JavaScript、CSS、HTML）
+《“i 语植”——基于 Nakatadia 模式的园艺疗法本土化康复训练计划》项目的前端展示网页（jQuery、Bootstrap、JavaScript、CSS、HTML）
