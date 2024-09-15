@@ -1,0 +1,101 @@
+2024/06/23 13:24:11 Server starting on address 127.0.0.1:8080...
+2024/06/23 13:29:06 Server starting on address 127.0.0.1:8080...
+2024/06/23 13:41:42 Server starting on address 127.0.0.1:80...
+2024/06/23 13:41:42 Failed to start server: listen tcp 127.0.0.1:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+2024/06/23 13:42:06 Server starting on address 127.0.0.1:8000...
+2024/06/23 13:45:05 Server starting on address 127.0.0.1:8000...
+2024/06/23 14:55:54 Server starting on address 127.0.0.1:8000...
+2024/06/23 17:06:47 Server starting on address 127.0.0.1:8000...
+2024/06/23 17:07:08 Server starting on address 127.0.0.1:8000...
+2024/06/24 11:17:08 Error pinging the database: dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.
+2024/06/24 11:18:10 Connected to the database successfully
+2024/06/24 11:18:10 Server starting on address 127.0.0.1:8000...
+2024/06/24 15:43:18 Connected to the database successfully
+2024/06/24 15:43:18 Server starting on address 127.0.0.1:8000...
+2024/06/24 16:44:27 Connected to the database successfully
+2024/06/24 16:44:28 Server starting on address 127.0.0.1:8000...
+2024/06/25 11:32:40 Connected to the database successfully
+2024/06/25 11:32:40 Server starting on address 127.0.0.1:8000
+2024/06/25 11:33:44 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Ou:ou=01,ou=people,dc=czzfhk,dc=org Ip: Time:2024-06-25 11:33:44 Status:在岗}
+2024/06/25 17:04:32 Connected to the database successfully
+2024/06/25 17:04:32 Server starting on address 127.0.0.1:8000
+2024/06/25 17:04:45 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Ou:ou=01,ou=people,dc=czzfhk,dc=org Ip:172.27.166.2 Time:2024-06-25 17:04:45 Status:在岗}
+2024/06/25 17:24:36 Connected to the database successfully
+2024/06/25 17:24:36 Server starting on address 127.0.0.1:8000
+2024/06/25 17:38:42 Connected to the database successfully
+2024/06/25 17:38:42 Server starting on address 127.0.0.1:8000
+2024/06/25 17:41:56 Connected to the database successfully
+2024/06/25 17:41:56 Server starting on address 127.0.0.1:8000
+2024/06/25 17:42:15 Error connecting to the 123: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ip=?, status=? WHERE dn=?' at line 1
+2024/06/25 17:43:01 Connected to the database successfully
+2024/06/25 17:43:01 Server starting on address 127.0.0.1:8000
+2024/06/25 17:43:04 Error connecting to the 123: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ip=?, status=? WHERE dn=?' at line 1
+2024/06/25 17:43:59 Connected to the database successfully
+2024/06/25 17:43:59 Server starting on address 127.0.0.1:8000
+2024/06/25 17:44:00 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Ou:ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-25 17:44:00 Ip:172.27.166.2 Status:暂离}
+2024/06/25 19:52:17 Connected to the database successfully
+2024/06/25 19:52:17 Server starting on address 127.0.0.1:8000
+2024/06/25 20:33:41 Connected to the database successfully
+2024/06/25 20:33:41 Server starting on address 127.0.0.1:8000
+2024/06/25 20:44:30 Connected to the database successfully
+2024/06/25 20:44:30 Server starting on address 127.0.0.1:8000
+2024/06/25 21:36:55 Connected to the database successfully
+2024/06/25 21:36:55 Server starting on address 127.0.0.2:8000
+2024/06/25 21:37:44 Connected to the database successfully
+2024/06/25 21:37:44 Server starting on address 211.71.149.249:8000
+2024/06/25 21:37:44 Failed to start server: listen tcp 211.71.149.249:8000: bind: The requested address is not valid in its context.
+2024/06/25 21:38:47 Connected to the database successfully
+2024/06/25 21:38:47 Server starting on address 172.27.166.2:8000
+2024/06/25 21:40:11 Connected to the database successfully
+2024/06/25 21:40:11 Server starting on address 211.145.54.87:8000
+2024/06/25 21:40:11 Failed to start server: listen tcp 211.145.54.87:8000: bind: The requested address is not valid in its context.
+2024/06/25 21:40:43 Connected to the database successfully
+2024/06/25 21:40:43 Server starting on address 211.145.54.87:8000
+2024/06/25 21:40:43 Failed to start server: listen tcp 211.145.54.87:8000: bind: The requested address is not valid in its context.
+2024/06/25 21:41:37 Connected to the database successfully
+2024/06/25 21:41:38 Server starting on address 211.145.54.87:8000
+2024/06/25 21:41:38 Failed to start server: listen tcp 211.145.54.87:8000: bind: The requested address is not valid in its context.
+2024/06/25 21:42:04 Connected to the database successfully
+2024/06/25 21:42:04 Server starting on address 211.145.54.87:8008
+2024/06/25 21:42:04 Failed to start server: listen tcp 211.145.54.87:8008: bind: The requested address is not valid in its context.
+2024/06/25 21:43:44 Connected to the database successfully
+2024/06/25 21:43:44 Server starting on address 211.145.54.87:10000
+2024/06/25 21:43:44 Failed to start server: listen tcp 211.145.54.87:10000: bind: The requested address is not valid in its context.
+2024/06/25 22:07:56 Connected to the database successfully
+2024/06/25 22:07:56 Server starting on address 127.0.0.1:8000
+2024/06/26 10:15:11 Connected to the database successfully
+2024/06/26 10:15:11 Server starting on address 127.0.0.1:8000
+2024/06/26 10:15:20 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:15:20 Decoded JSON: {Result:false}
+2024/06/26 10:15:20 0
+2024/06/26 10:24:13 Connected to the database successfully
+2024/06/26 10:24:13 Server starting on address 127.0.0.1:8000
+2024/06/26 10:24:20 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:24:20 Decoded JSON: {Result:true}
+2024/06/26 10:24:20 1
+2024/06/26 10:32:48 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:32:48 Decoded JSON: {Result:true}
+2024/06/26 10:32:48 1
+2024/06/26 10:33:22 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:33:22 Decoded JSON: {Result:false}
+2024/06/26 10:33:22 0
+2024/06/26 10:38:16 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:38:16 Decoded JSON: {Result:false}
+2024/06/26 10:38:16 0
+2024/06/26 10:39:58 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:上班已打卡}
+2024/06/26 10:39:58 Decoded JSON: {Result:true}
+2024/06/26 10:39:58 1
+2024/06/26 10:39:58 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Time:2024-06-26 Status:下班已打卡}
+2024/06/26 10:39:58 Decoded JSON: {Result:false}
+2024/06/26 10:39:58 0
+2024/06/26 11:39:06 Connected to the database successfully
+2024/06/26 11:39:06 Server starting on address 127.0.0.1:8000
+2024/06/26 11:40:58 Connected to the database successfully
+2024/06/26 11:40:58 Server starting on address 127.0.0.1:8000
+2024/06/26 11:41:10 Decoded JSON: {Dn:uid=A1,ou=01,ou=people,dc=czzfhk,dc=org Ip:172.27.166.2 Time:2024-06-26 11:41:10 Status:上班已打卡}
+2024/06/26 11:43:08 Connected to the database successfully
+2024/06/26 11:43:08 Server starting on address 127.0.0.1:8000
+2024/06/26 17:32:59 Connected to the database successfully
+2024/06/26 17:32:59 Server starting on address 127.0.0.1:8000
+2024/06/26 17:44:03 Connected to the database successfully
+2024/06/26 17:44:03 Server starting on address 127.0.0.1:8000
