@@ -11,4 +11,7 @@ func main() {
 	fmt.Println()
 
 	concurrenceGrammar()
+	fmt.Println()
+
+	otherGrammar()
 }
