@@ -54,6 +54,18 @@
 
 - 
 
+- React/home_demo/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子
+
+- 
+
+- Rust/web_server/：基于线程池的 Web 服务器
+
+- 
+
+- Vue.js/mall_demo/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子
+
+- 
+
 - 《Web 前端开发》课程/期末大作业/index.html、个人爱好页.html 和最爱课程页.html
 
 - 《程序设计基础》课程/课程设计/销售业绩管理系统.c
@@ -198,9 +210,41 @@ workflow5_interface/
 
 - cdn_demo.html：使用 CDN 方式引入 React 的简单例子
 
+home_demo/
+
+- **/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子**
+
 cli_demo/
 
 - /：使用脚手架方式引入 React 的语法例子
+
+## Rust/
+
+advanced_grammar/
+
+- /：高级语法的学习
+
+basic_grammar/
+
+- /：基础语法的学习
+
+guessing_game/
+
+- /：猜数游戏
+
+minigrep/
+
+- /：搜索文件内容
+
+web_server/
+
+- **/：基于线程池的 Web 服务器**
+
+## Vue.js/
+
+mall_demo/
+
+- **/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子**
 
 ## 《C++ 程序设计》课程/
 
