@@ -20,52 +20,6 @@
 
 # 二、高质量内容
 
-- C++/其他/
-
-- C++/可变参数/
-
-- C++/模板特化/
-
-- C++/类/
-
-- C++/约束与概念/
-
-- C++/线程/
-
-- C++/迭代器/
-
-- 
-
-- Go/workflow5_interface/：工作流项目中，处理日志、数据库、JSON 和 HTTP 的服务端接口
-
-- 
-
-- Project/todolist/：
-
-  todolist/
-
-  前端：React（JavaScript；CSS；HTML）
-
-  后端：Gin；Gorm（Go）
-
-  数据库：MySQL（Docker；Linux）
-
-  涉及前后端分离、HTTP 接口交互、MVC 架构和跨域/CORS 等知识的简单综合项目
-
-- 
-
-- React/home_demo/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子
-
-- 
-
-- Rust/web_server/：基于线程池的 Web 服务器
-
-- 
-
-- Vue.js/mall_demo/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子
-
-- 
-
 - 《Web 前端开发》课程/期末大作业/index.html、个人爱好页.html 和最爱课程页.html
 
 - 《程序设计基础》课程/课程设计/销售业绩管理系统.c
@@ -148,6 +102,12 @@
 
 - 
 
+- DES/：数据加密标准（DES）密码算法
+
+- DH/：Diffie-Hellman密钥交换算法
+
+- RSA/：RSA密码算法
+
 - 《计算机网络安全》课程/实验实验一/：DES 密码算法的加解密（C++）
 
 - 《计算机网络安全》课程/实验实验三/：RSA 密码算法的加解密（C++）
@@ -160,43 +120,47 @@
 
 - 《网络工程综合专业实践》课程/*.png：野外数据监测系统（Django、MySQL、Bootstrap、JavaScript、CSS、HTML、Node.js）
 
-# 三、主要内容
+- 
 
-## C++/
+- C++/simple_combination/：组合数简单生成工具
 
-- 其他/
-- 可变参数/
-- 模板特化/
-- 类/
-- 约束与概念/
-- 线程/
-- 迭代器/
+- C++/simple_digital/：进制数简单生成工具
 
-## Go/
+- C++/simple_disjointset/：并查集简单创建工具
 
-workflow5_interface/
+- C++/simple_permutation/：排列数简单生成工具
 
-- **/：工作流项目中，处理日志、数据库、JSON 和 HTTP 的服务端接口**
+- C++/simple_polynomial/：多项式除法简单计算工具
 
-自带包/
+- C++/其他/
 
-- CGO.go
-- context.go
-- syncPool.go
-- unsafe.go
-- 其他包.go
-- 反射.go
+- C++/可变参数/
 
-语法/
+- C++/模板特化/
 
-- 其他语法.go
-- 基础语法.go
-- 并发语法.go
-- 高级语法.go
+- C++/类/
 
-## Project/
+- C++/约束与概念/
 
-- todolist/：
+- C++/线程/
+
+- C++/迭代器/
+
+- 
+
+- Go/network_file_transfer/：网络文件传输
+
+- Go/workflow5_interface/：工作流项目中，处理日志、数据库、JSON 和 HTTP 的服务端接口
+
+- 
+
+- Node.js/simple_Web_server/：简单Web服务端
+
+- 
+
+- Project/todolist/：
+
+  todolist/
 
   前端：React（JavaScript；CSS；HTML）
 
@@ -206,45 +170,92 @@ workflow5_interface/
 
   涉及前后端分离、HTTP 接口交互、MVC 架构和跨域/CORS 等知识的简单综合项目
 
-## React/
+- 
 
-- cdn_demo.html：使用 CDN 方式引入 React 的简单例子
+- React/home_demo/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子
 
-home_demo/
+- 
 
-- **/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子**
+- Rust/web_server/：基于线程池的 Web 服务器
 
-cli_demo/
+- 
 
-- /：使用脚手架方式引入 React 的语法例子
+- Vue.js/mall_demo/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子
 
-## Rust/
+- 
 
-advanced_grammar/
+- 数据结构/sequence_list/：顺序表
 
-- /：高级语法的学习
+- 数据结构/link_list/：单链表
 
-basic_grammar/
+- 数据结构/static_link_list/：静态链表
 
-- /：基础语法的学习
+- 数据结构/stack/：栈
 
-guessing_game/
+- 数据结构/queue/：队列
 
-- /：猜数游戏
+- 数据结构/string_pattern_matching/：串的模式匹配
 
-minigrep/
+- 数据结构/binary_tree/：二叉树
 
-- /：搜索文件内容
+- 数据结构/graph/：图
 
-web_server/
+- 数据结构/linear_search/：线性查找
 
-- **/：基于线程池的 Web 服务器**
+- 数据结构/binary_sort_tree_search/：二叉排序树查找
 
-## Vue.js/
+- 数据结构/sort/：排序
 
-mall_demo/
+- 
 
-- **/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子**
+- 环境和网络编程/IPC/：进程间通信（IPC）
+
+- 环境和网络编程/load_ZF2/：加/卸载” Zend Framework 2
+
+- 环境和网络编程/TCP_simple/：传输控制协议（TCP）简单版
+
+- 环境和网络编程/multiprocess/：多进程版
+- 环境和网络编程/IO_multiplexing/：IO复用版
+- 环境和网络编程/daemon_process/：守护进程版
+- 环境和网络编程/UDP_simple/：用户数据报协议（UDP）简单版
+- 
+
+- 设计模式/singleton/singleton_eager/：单例（饿汉式）
+- 设计模式/singleton/singleton_lazy/：单例（懒汉式）
+- 设计模式/simple_factory/：简单工厂
+- 设计模式/actory_method/：工厂方法
+- 设计模式/abstract_factory/：抽象工厂
+- 设计模式/prototype/：原型
+- 设计模式/builder/：建造者
+
+- 设计模式/proxy/：代理
+
+- 设计模式/adapter/adapter_class/：适配器（类适配器式）
+
+- 设计模式/adapter/adapter_object/：适配器（对象适配器式）
+- 设计模式/facade/：外观
+- 设计模式/decorator/：装饰
+- 设计模式/composite/：组合
+- 设计模式/bridge/：桥接
+- 设计模式/flyweight/：享元
+
+- 设计模式/template_method/：模板方法
+
+- 设计模式/strategy/：策略
+
+- 设计模式/chain_of_responsibility/：职责链
+- 设计模式/state/：状态
+- 设计模式/command/：命令
+- 设计模式/observer/：观察者
+- 设计模式/memento/memento_unnested/：备忘录（基于非嵌套类/接口的实现）
+
+- 设计模式/memento/memento_nest/：备忘录（基于嵌套类的实现）
+- 设计模式/iterator/：迭代器
+- 设计模式/interpreter/：解释器
+- 设计模式/mediator/：中介者
+- 设计模式/visitor/：访问者
+
+# 三、主要内容
 
 ## 《C++ 程序设计》课程/
 
@@ -583,8 +594,55 @@ OJ/OJ2栈和队列
 
 - caesarCode.cpp：凯撒密码算法的加解密
 
-实验
+实验/
 
+- **DES/：数据加密标准（DES）密码算法**
+
+  **纯**C++语言
+
+  **基于对象**编程范式
+
+  使用高级特性
+
+  考虑性能优化
+
+  相对规范和整洁
+
+  提示易错点
+
+  **解析数据加密标准（DES）步骤**
+- **DH/：Diffie-Hellman密钥交换算法**
+
+  **纯**C++语言
+
+  **基于对象**编程范式
+
+  使用高级特性
+
+  考虑性能优化
+
+  相对规范和整洁
+
+  提示易错点
+
+  **解析Diffie-Hellman步骤（网络上大部分实现代码的含义不明确，本代码相对明确）**
+- **RSA/：RSA密码算法**
+
+  **纯**C++语言
+
+  **基于对象**编程范式
+
+  使用高级特性
+
+  考虑性能优化
+
+  相对规范和整洁
+
+  提示易错点
+
+  **解析RSA步骤（网络上大部分实现代码的含义不明确，本代码相对明确）**
+
+  **未使用大（素）数，但提供大（素）数实现的讨论**
 - **实验一/：DES 密码算法的加解密（C++）**
 - **实验三/：RSA 密码算法的加解密（C++）**
 - **实验二/：DES 密码算法的加解密和支持部分工作模式（C++）**
@@ -634,6 +692,545 @@ demand_one.sql
 ## 《高级软件测试》课程/实验二/
 
 - 找零钱.go
+
+## C++/
+
+simple_combination/
+
+- **/：组合数简单生成工具**
+
+​	简单地生成组合数
+
+​	**有详细的步骤解析**
+
+simple_digital/
+
+- **/：进制数简单生成工具**
+
+  简单地生成进制数
+
+  **有详细的步骤解析**
+
+simple_disjointset/
+
+- **/：并查集简单创建工具**
+
+  简单地创建并查集
+
+  **注释有详细的步骤解析**
+
+simple_permutation/
+
+- **/：排列数简单生成工具**
+
+​	简单地生成排列数
+
+​	**有详细的步骤解析**
+
+simple_polynomial/
+
+- **/：多项式除法简单计算工具**
+
+​	简单地计算多项式除法
+
+​	**注释有详细的步骤解析**
+
+其他/
+
+可变参数/
+
+模板特化/
+
+类/
+
+约束与概念/
+
+线程/
+
+迭代器/
+
+## Go/
+
+client_server_model/
+
+- /：客户端/服务端（C/S）模型
+
+​	实现服务端和客户端的简单通信：服务端接收，并原样发送所接收的数据给客户端
+
+​	服务端使用多协程处理与多客户端的连接
+
+​	客户端使用多协程处理终端用户输入和接收服务端数据
+
+> 相比于C、C++和其他语言，使用Go实现网络编程的逻辑很简单
+
+​	**有详细的步骤解析**
+
+network_file_transfer/
+
+- **/：网络文件传输**
+
+  使用服务端/客户端（C/S）模型
+
+  实现发送方（客户端）和接收方（服务端）的简单网络文件传输：发送方发送文件名，接收方回复响应，发送方再发送文件内容，接收方接收文件内容并保存在当前目录
+
+> 网络传输文件的形式和本地传输文件类似，**本质是写读文件**
+
+​	接续上一份代码实例“客户端/服务端（C/S）模型”，本章将传输的用户输入数据改为传输文件
+
+​	**有详细的步骤解析**
+
+> 注意：关于网络编程的代码，上一份代码实例“客户端/服务端（C/S）模型”有详细的注释，本代码不再过多注释，只注释新增的网络文件传输相关内容
+
+producer_consumer_model/
+
+- /：生产者消费者模型
+
+  使用go关键字开启多协程goroutine，而不是多进程和多线程，实现并发
+
+  使用管道channal，而不是锁，实现同步互斥和数据通信
+
+> 可联想进程间通信（IPC）中的管道pipe()、共享内存等方式
+
+​	使用select{}语句，实现监听输入/输出（I/O）操作
+
+> 可联想网络编程中的监听文件描述符select()函数
+
+> 相比于C、C++和其他语言，使用Go实现并发编程的逻辑很简单
+
+​	**有详细的步骤解析**
+
+workflow5_interface/
+
+- **/：工作流项目中，处理日志、数据库、JSON 和 HTTP 的服务端接口**
+
+自带包/
+
+- CGO.go
+- context.go
+- syncPool.go
+- unsafe.go
+- 其他包.go
+- 反射.go
+
+语法/
+
+- 其他语法.go
+- 基础语法.go
+- 并发语法.go
+- 高级语法.go
+
+## Node.js/
+
+simple_Web_server/
+
+- **/：简单Web服务端**
+
+  **详细解析创建http服务端的流程、URL的组成、请求消息的结构和响应消息的结构**
+
+  通过网络传输，浏览器客户端向该Web服务端发送“GET”请求，服务端依据URL响应本地相应的HTML、CSS和JavaScript文件，并在客户端渲染显示页面
+
+## Project/
+
+todolist/：
+
+- /：待办清单
+
+  前端：React（JavaScript；CSS；HTML）
+
+  后端：Gin；Gorm（Go）
+
+  数据库：MySQL（Docker；Linux）
+
+  涉及前后端分离、HTTP 接口交互、MVC 架构和跨域/CORS 等知识的简单综合项目
+
+## React/
+
+cdn_demo.html：使用 CDN 方式引入 React 的简单例子
+
+home_demo/
+
+- **/：使用 React、React Router、Redux、Ant Design、Axios和 ECharts 的稍复杂首页例子**
+
+cli_demo/
+
+- /：使用脚手架方式引入 React 的语法例子
+
+## Rust/
+
+advanced_grammar/
+
+- /：高级语法的学习
+
+basic_grammar/
+
+- /：基础语法的学习
+
+guessing_game/
+
+- /：猜数游戏
+
+minigrep/
+
+- /：搜索文件内容
+
+web_server/
+
+- **/：基于线程池的 Web 服务器**
+
+## Vue.js/
+
+mall_demo/
+
+- **/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子**
+
+## 数据结构/
+
+（1）**顺序表：sequence_list**
+
+- C语言，C++语言
+- 顺序表的实现模板
+- **有详细的步骤解析和使用示例**
+
+（2）**单链表：link_list**
+
+- C语言，C++语言
+- 单链表的实现模板
+- **有详细的步骤解析和使用示例**
+
+（3）**静态链表：static_link_list**
+
+- C语言，C++语言
+- 静态链表的实现模板
+- **有详细的步骤解析和使用示例**
+
+（4）**栈：stack**
+
+- C语言，C++语言
+- 顺序栈的实现模板
+- 链栈的实现模板
+- **有详细的步骤解析和使用示例**
+
+（5）**队列：queue**
+
+- C语言，C++语言
+- 顺序循环队列的实现模板
+- 链队列的实现模板
+- **有详细的步骤解析和使用示例**
+
+（6）**串的模式匹配：string_pattern_matching**
+
+- C语言，C++语言
+- 暴力/简单/朴素算法的实现模板
+- KMP算法的实现模板
+- KMP改进算法的实现模板
+- **有详细的步骤解析和使用示例**
+
+（7）**二叉树：binary_tree**
+
+- C语言，C++语言
+- 二叉树的实现模板
+- 线索二叉树的实现模板
+- **有详细的步骤解析和使用示例**
+
+（8）**图：graph**
+
+- C语言，C++语言
+- 图邻接矩阵的实现模板
+- 图邻接表的实现模板
+- **有详细的步骤解析和使用示例**
+
+（9）**线性查找：linear_search**
+
+- C语言，C++语言
+- 线性查找的实现模板
+- **有详细的步骤解析和使用示例**
+
+（10）**二叉排序树查找：binary_sort_tree_search**
+
+- C语言，C++语言
+- 二叉排序树查找的实现模板
+- **有详细的步骤解析和使用示例**
+
+（11）**排序：sort**
+
+- C语言，C++语言
+- 排序的实现模板
+- **有详细的步骤解析和使用示例**
+
+## 环境和网络编程/
+
+一、说明
+
+- 均使用Linux操作系统环境（其他环境会额外说明）
+- 均使用网际协议版本4（IPv4）
+
+二、环境编程内容（2例）
+
+（1）**进程间通信（IPC）：IPC**
+
+内容：对大部分总结的进程间通信机制提供简单实现：12种
+
+- 头文件全局变量：glov_h
+- 源文件全局变量：glov_s
+- 文件，PV操作：file_pv
+- 管道：pipe
+- 命名管道：fifo
+- 信号：sig
+- XSI信号量：sem_XSI
+- POSIX信号量：sem_POSIX
+- 消息队列：mq
+- 共享内存：shm
+- 套接字：socket（使用代码仓库中，“传输控制协议（TCP）简单版：TCP_simple”）
+- 内存映射：mmap
+
+说明
+
+- 有详细步骤解析
+- 只简单演示基础的操作，未考虑深层次的问题
+- 对相关函数获取返回值进行错误处理，不相关函数不进行错误处理
+
+持续更新
+
+- 当前内容总结于代码仓库作者和《UNIX环境高级编程（第3版）》的一部分
+- 在《UNIX网络编程（第3版）卷2：进程间通信》中，还有其他的进程间通信机制，在后面有时间阅读后，持续更新代码仓库和博客
+
+（2）**“加/卸载” Zend Framework 2：load_ZF2**
+
+现状：已存在旧生产项目，系统使用 Zend Framework 2（基于 PHP 的 Web MVC 框架，简称 ZF2）
+
+目标：简化 ZF2 的配置
+
+内容
+
+1. 将 ZF2 的供应镜像可执行文件加载到内存，并**映射/解映射**到虚拟设备的一个分区
+2. 将虚拟设备的文件系统**挂/卸载**到目录
+
+实现
+
+- 环境：**FreeBSD**（服务器）
+- 语言：C/C++（程序）
+- 核心：执行 Shell 命令（程序使用 UNIX -> FreeBSD 的系统调用）
+- 要求：可靠（尽可能地考虑并处理错误情况）
+
+说明
+
+- 注释有详细解析
+
+文件结构
+
+
+- 文件夹：load_ZF2
+- 源文件：main.cpp
+- 可执行文件：main
+- 说明文件：readme.txt
+- 配置文件：setupvendor.conf
+- ZF2 的供应镜像文件：ZF2VendorImage.bin（**因为是生产项目，未将该文件开源在代码仓库**）
+
+拓展
+
+- 该份实例实际上是在 UNIX/FreeBSD/Linux 环境使用 C/C++ 程序执行 Shell 命令的**特例**版本
+- 看懂代码后，稍加修改，该份实例可以成为**通用**版本
+
+三、网络编程内容（5例）
+
+1.迭代改进内容
+
+（1）**传输控制协议（TCP）简单版：TCP_simple**
+
+- 使用传输控制协议（TCP）
+
+- 一个服务端连接一个客户端
+
+- 一次自动通信
+
+（2）**多进程版：multiprocess**
+
+- 使用传输控制协议（TCP）
+
+- 一个服务端可连接多个客户端——增加
+
+- 多次手动通信——增加
+
+（3）**IO复用版：IO_multiplexing**
+
+- 使用传输控制协议（TCP）
+- 服务端多进程，一个服务端可连接多个客户端
+- 用户在客户端终端输入，可多次手动通信
+- 服务端可获取客户端地址的逻辑；更新部分函数使用、错误处理、注释和Makefile文件；为保证代码简洁，部分输入输出和字符串处理函数未进行错误检测——增加
+- 3个客户端代码实例分别使用IO复用的select、poll和epoll技术，同时监听用户输入和网络接收，可即时接收服务端进程终止和服务端主机关机消息——增加
+- 客户端使用shutdown()而不是close()关闭连接，当客户端主动关闭写半部连接后，服务端仍能够接收而不是丢弃批量输入的缓冲区数据——增加
+
+（4）**守护进程版：daemon_process**
+
+- 使用传输控制协议（TCP）
+- 检测recv()返回值，遇到信号或网络中断会重启
+- 为保证代码简洁，部分输入输出和字符串处理函数未获取返回值进行错误检测
+- 服务端作为守护进程启动，设置无缓冲IO，标准输入、输出和错误重定向并实时记录到日志文本文件。在main()开头注释不调用create_daemon()，可不作为守护进程启动——增加
+- 服务端使用signal()注册SIGCHLD信号处理函数（signal()函数对信号处理一次后，信号恢复默认行为，需要在信号处理函数中重新注册）。信号处理函数中使用可重入函数和保存并恢复旧errno方案，避免重入错误。父进程接收SIGCHLD信号后调用循环非阻塞waitpid()可处理同时终止的多个子进程，避免子进程成为僵尸进程——增加
+- 服务端检测accept()慢系统调用的返回值，遇到信号中断会重启。在三次握手后且accept()返回前的时序，收到客户端RST重新连接，依据POSIX标准重启——增加
+- 服务端设置套接字选项：SO_KEEPLIVE。客户端不发送数据也可以检测到服务端主机崩溃、主机崩溃后重启或网络不可达——增加
+- 服务端设置套接字选项：SO_REUSEADDR。服务端Ctrl+C或意外中止后，不会经过TIME_WAIT状态，bind()不会报错：Address already in use，可立即重启服务端。连接套接字子进程正常运行，监听套接字父进程可立即重启。允许多个IP地址绑定同一个端口——增加
+- 服务端多进程，一个服务端可并发连接多个客户端
+- 服务端使用getpeername()而不是传递客户端sockaddr_in{}参数获取客户端地址——修改
+- 用户在客户端终端输入，可多次手动通信
+- 3个客户端代码实例分别使用IO复用的select、poll和epoll技术，同时监听用户输入和网络接收，可即时检测到服务端进程终止和服务端主机关机
+- Makefile文件增加注释和生成.o目标文件逻辑——增加
+
+2.其他内容
+
+（1）**用户数据报协议（UDP）简单版：UDP_simple**
+
+- 使用用户数据报协议（UDP）
+
+- 一个服务端连接一个客户端
+
+- 一次自动通信
+
+## 设计模式/
+
+> 24 + 3 = 27例
+
+（1.1）单例（饿汉式）：singleton/singleton_eager
+
+- **纯** C++ 语言
+- 现代 C++ 标准
+- 详细注释
+
+（1.2）单例（懒汉式）：singleton/singleton_lazy
+
+- **纯** C++ 语言
+- 现代 C++ 标准
+- 详细注释
+
+（2）简单工厂：simple_factory
+
+- **纯** C++ 语言
+- 面向对象编程范式
+- 现代 C++ 标准
+
+（3）工厂方法：factory_method
+
+- **纯** C++ 语言
+- 面向对象编程范式
+- 现代 C++ 标准
+
+（4）抽象工厂：abstract_factory
+
+- **纯** C++ 语言
+- 面向对象编程范式
+- 现代 C++ 标准
+
+（5）原型：prototype
+
+- **纯** C++ 语言
+- 面向对象编程范式
+- 现代 C++ 标准
+
+（6）建造者：builder
+
+- **纯** C++ 语言
+- 面向对象编程范式
+- 现代 C++ 标准
+
+（7）代理：proxy
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（8.1）适配器（类适配器式）：adapter/adapter_class
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（8.2）适配器（对象适配器式）：adapter/adapter_object
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（9）外观：facade
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（10）装饰：decorator
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（11）组合：composite
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（12）桥接：bridge
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（13）享元：flyweight
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（14）模板方法：template_method
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（15）策略：strategy
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（16）职责链：chain_of_responsibility
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（17）状态：state
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（18）命令：command
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（19）观察者：observer
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（20.1）备忘录（基于非嵌套类/接口的实现）：memento/memento_unnested
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（20.2）备忘录（基于嵌套类的实现）：memento/memento_nest
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（21）迭代器：iterator
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（22）解释器：interpreter
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（23）中介者：mediator
+
+- **纯** C++ 语言
+- 面向对象编程范式
+
+（24）访问者：visitor
+
+- **纯** C++ 语言
+- 面向对象编程范式
 
 # 四、课程年份
 
@@ -735,3 +1332,41 @@ demand_one.sql
   《网络管理》课程的部分作业和实验（Linux 运维相关）
 
 - 与编程无关的内容...
+
+# 六、部分参考资料
+
+## 《计算机网络安全》课程
+
+- 《密码编码学与网络安全——原理与实践(第五版)》作者：William Stallings
+
+## C++
+
+- 学校《高级算法设计与分析》课程课件的算法思路
+
+## Node.js
+
+- [Node.js (nodejs.org)](https://nodejs.org/en)
+- [Node.js 中文网 (nodejs.cn)](https://nodejs.cn/)
+- [黑马程序员Node.js全套入门教程，nodejs新教程含es6模块化+npm+express+webpack+promise等_Nodejs实战案例详解_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1a34y167AZ/?spm_id_from=333.337.search-card.all.click&vd_source=9ac1c0a6d496218112b60d49bc768cd7)
+- [尚硅谷2023版Node.js零基础视频教程，nodejs新手到高手_哔哩哔哩_bilibili](
+
+## Go
+
+- [20个小时快速入门go语言（中）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1UW411x7Ve/?spm_id_from=333.337.search-card.all.click&vd_source=9ac1c0a6d496218112b60d49bc768cd7)
+- [黑马程序员20个小时快速入门go语言（下）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV17W411W7hm/?spm_id_from=333.337.search-card.all.click)
+
+##  数据结构
+
+- 《2023版数据结构高分笔记》主编：率辉
+- 《2023年计算机组成原理考研复习指导》组编：王道论坛
+- 《大话数据结构》作者：程杰
+
+## 环境和网络编程
+
+- 《UNIX环境高级编程（第3版）》作者：W.Richard Stevens，Stephen A.Rago
+
+- 《UNIX网络编程（第3版）》作者：W.Richard Stevens，Bill Fenner，Andrew M.Rudoff
+
+## 设计模式
+
+- [设计模式_夜悊的博客-CSDN博客](https://blog.csdn.net/m0_62083249/category_11757923.html?spm=1001.2014.3001.5482)
