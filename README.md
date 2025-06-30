@@ -14,7 +14,7 @@
 - **课程的内容过多，整理时难免有疏漏，若有不合适内容（版权或敏感信息等）非常抱歉，提醒会删除！**
 - **课程的部分内容非个人所有版权，仅展示部分效果图片，不开放代码**
 - 课程年份是代码编写的真实年份，除修改少量内容（版权或敏感信息等）外均无改动，为个人学习编写并有大量详细注释！
-- 2019-2023 年份课程（除《高级算法设计与分析》课程）的代码，都不包含 AI 辅助！
+- **2019-2023 年份课程（除《高级算法设计与分析》课程）的代码，都不包含 AI 辅助！**
 - 课程的部分 C 或 C++ 代码使用 Microsoft Visual Studio 推荐的“更安全函数”如“scanf_s()”，可能需要修改为“scanf()”
 - 课程的部分 Java 、PHP 或 HTML 代码可能需要使用“GB2312”字符编码
 
@@ -181,6 +181,10 @@
 - 
 
 - Vue.js/mall_demo/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子
+
+- 
+
+- 人工智能/simple_rag/：简单RAG流程实现
 
 - 
 
@@ -883,6 +887,12 @@ mall_demo/
 
 - **/：使用 Vue.js、Vue Router、Pinia 和 Element Plus 的复杂商城例子**
 
+## 人工智能/
+
+simple_rag/
+
+- **/：简单RAG流程实现**
+
 ## 数据结构/
 
 （1）**顺序表：sequence_list**
@@ -1354,6 +1364,10 @@ mall_demo/
 
 - [20个小时快速入门go语言（中）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1UW411x7Ve/?spm_id_from=333.337.search-card.all.click&vd_source=9ac1c0a6d496218112b60d49bc768cd7)
 - [黑马程序员20个小时快速入门go语言（下）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV17W411W7hm/?spm_id_from=333.337.search-card.all.click)
+
+## 人工智能
+
+- [10分钟讲清楚 Prompt, Agent, MCP 是什么_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1aeLqzUE6L?spm_id_from=333.788.videopod.sections&vd_source=9ac1c0a6d496218112b60d49bc768cd7)
 
 ##  数据结构
 
